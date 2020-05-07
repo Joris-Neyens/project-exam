@@ -1,0 +1,452 @@
+body {
+    margin: 0;
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    background-color: black;
+}
+h1 {
+    font-weight: 400;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    margin: 0;
+}
+h2 {
+    font-weight: 400;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    margin: 0;
+}
+.button {
+    padding: 5px 20px;
+    background: rgb(9,140,246);
+    background: linear-gradient(90deg, rgba(9,140,246,1) 15%, rgba(26,177,230,1) 77%); 
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+}
+.button:hover {
+    background: #C44489;
+}
+p {
+    color: #A6B5C6; 
+    font-size: 1.2em;
+}
+.main-nav a.active-link {
+    color: white;
+}
+header {
+    height: 100vh;
+}
+.logo {
+    width: 100%;
+    height: auto;
+}
+.logo img {
+    display: block;
+    width: 20%;
+    margin: 0 auto;
+    padding: 10px 0 0 40px;
+}
+.tagline {
+    text-align: center;
+    margin: 10px 0 20px 0;
+}
+.tagline p {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9em;
+    color: white;
+}
+.background-image {
+    background-image: url(/images/hiclipart.com.png);
+    height: 100vh;
+    background-size: contain;   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+.main-nav {
+    padding: 0 0 0 50px;
+}
+.main-nav ul {
+    display: flex;
+    font-size: 1.2em; 
+    padding: 0;
+    margin: 0;
+}
+.main-nav li {
+    list-style-type: none;
+    padding: 0 5px;
+    color: #A6B5C6;
+}
+.main-nav a {
+    text-decoration: none;
+    color: #A6B5C6;
+}
+.main-nav a:hover {
+    color: white;
+}
+.countdown-container {
+    position: relative;
+    width: 30%;
+}
+.countdown-container .corner-top {
+    position: absolute; 
+    top:0;
+    right: 0;
+    width: 50%; 
+}
+.countdown-container .corner-bottom {
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    width: 50%; 
+}
+.mission-name p {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 0.8em !important;
+}
+.mission-date p {
+    position: absolute;
+    right: 0;
+    font-size: 0.8em !important;
+}
+.header-content {
+    display: flex;
+    padding-top: 18vh;
+}
+h1 {
+    font-weight: 400;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    margin: 0;
+}
+.countdown-container {
+    height: 15%;
+    margin: auto;
+}
+.clock-title {
+    text-align: center;
+}
+.countdown-container p {
+    font-size: 1em;
+    font-weight: 300;
+    margin: 0;
+    color: #1AB1E6;  
+}
+.clock-container {
+    padding: 20px 20px;
+}
+.clock {
+    display: flex;
+    justify-content: center;
+}
+p.number {
+    font-weight: 700;
+}
+.number-flex {
+    font-size: 2em;
+    font-weight: 500;
+}
+.number-flex {
+    display: flex;
+}
+.number-flex p {
+    padding: 0 5px;
+}
+/*-------Latest-Launch--------*/
+.latest-launch {
+    display: flex;
+    height: 100vh;
+}
+.latest-launch-info {
+ width: 50%;
+}
+.launch-text {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 20vh;
+}
+.launch-text p {
+    line-height: 1.7;
+}
+.launch-text h2 {
+    margin-top: 30px;
+}
+.latest-launch-video {
+    width: 50%;
+}
+iframe {
+    display: block;
+    margin: 0 auto;
+    padding-top: 15vh;
+    width: 560px;
+    height: 315px;
+}
+.launch-details-container {
+    width: 100%;
+}
+.launch-details {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 0.8em;
+}
+.details {
+    display: flex;
+    padding: 10px;
+}
+.details p {
+    margin: -8px 0;
+}
+.category {
+    width: 150px;
+    font-weight: 300;
+}
+.details p.info {
+    color: white;
+
+}
+/*-------SpaceX--------*/
+.spacex {
+    display: flex;
+    height: 100vh;
+}
+.spacex-info {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spacex-image {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spacex-text {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 20vh;
+}
+.spacex-text p {
+    line-height: 1.7;
+    padding-bottom: 10px;
+}
+.spacex .button {
+    font-size: 1em;
+    line-height: 1.5;
+}
+.spacex-image img {
+    width: 80%;
+    transform: rotate(20deg);
+}
+
+/*-------Launch-schedule--------*/
+
+.launch-schedule {
+    height: 100vh;
+    display: flex;
+}
+.launch-schedule h2 {
+    padding-top: 20px;
+}
+.agenda-container {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+.launch-agenda {
+    width: 60%;
+    padding-top: 8vh;
+}
+.launch-agenda h1 {
+    width: 70%;
+    margin: 0 auto;
+}
+.launch-agenda .corner-top {
+    position: absolute;
+    width: 60%;
+}
+.launch-agenda .corner-bottom {
+    position: absolute;
+    width: 60%;
+    bottom: 0;
+    margin-left: -20px;
+    margin-bottom: -30px;
+}
+.launch-container {
+    display: flex;
+    padding-top: 20px;
+    font-size: 0.8em;
+}
+.launch-date .category {
+    width: 80px;
+}
+.category-info .info {
+    width: 200px;
+}
+.launch-container p {
+    margin: 5px 0;
+}
+.past-launches a {
+    margin-top: 20px;
+    line-height: 2;
+}
+.launch-schedule-image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.launch-schedule-image img {
+    width: 80%;
+}
+.launch-agenda .button {
+    position: relative;
+    margin: 50px 0 0 20vw;
+}
+/*-------tablet--------*/
+@media screen and (max-width: 1000px) {
+    .logo img {
+        width: 20%;
+    }
+    p {
+        font-size: 1.1em;
+        line-height: 1.7;
+    }
+    .launch-details {
+        font-size: 0.9em;
+    }
+    .launch-details .category {
+        width: 120px;
+    }
+    .details {
+        padding-left: 40px;
+    }
+    iframe {
+        width: 80%;
+        height: 30%;
+        padding-top: 20vh;
+    }
+}
+    @media screen and (max-width: 880px) {
+    .countdown-container {
+        width: 40%;
+    }
+    .latest-launch {
+        flex-direction: column;
+        height: auto;
+    }
+    .latest-launch-info {
+        width: 60%;
+        margin: 0 auto;
+    }
+    .launch-text {
+        width: 100%;
+        padding-top: 30px;
+        margin: 0;
+    }
+    .latest-launch-video {
+        width: 100%;
+    }
+    iframe {
+        padding-top: 30px;
+        width: 60%;
+        height: 40vh;
+    }
+    .launch-details {
+        padding-top: 30px;
+        width: 60%;
+        margin: 0 auto;
+    }
+    .spacex {
+        flex-direction: column;
+    }
+    .spacex-info {
+        width: 100%;
+    }
+    .spacex-text {  
+        width: 60%;
+        padding-top: 60px;
+        margin: 0 auto;
+    }
+    .launch-schedule-image {
+        display: none;
+    }
+    .launch-agenda {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .launch-agenda h1 {
+        margin: 0;
+    }
+    .agenda-container {
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+.background-image {
+    background-position: bottom;
+}
+.logo {
+    position: absolute;
+}
+.logo img {
+    width: 40%;
+}
+.tagline {
+    clear: both;
+}
+.main-nav {
+    display: none;
+}
+.burger {
+    padding: 10px;
+    float: left;
+}
+.burger p {
+    color: #1AB1E6; 
+    line-height: 8px;
+    margin: 0;
+    font-weight: 100;
+    font-size: 7em;
+}
+
+.burger-nav {
+    z-index: 100;
+    width: 100%;
+    padding-top: 60px; 
+}
+.burger-nav a {
+    text-decoration: none;
+    color: white;  
+}
+.burger-nav ul {
+    padding: 0 20px 0 20px;
+}
+.burger-nav li {
+    list-style-type: none;
+    padding: 10px 0;
+    background-color: black;
+}
+.header-content {
+    padding-top: 20vh;
+    
+}
+.countdown-container {
+    width: 70%;
+}
+}
