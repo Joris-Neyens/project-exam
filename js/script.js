@@ -48,11 +48,6 @@ function latestInfo(latestLaunch) {
 
 }
 
-
-
-
-
-
 const baseUrl = "https://api.spacexdata.com/v3/launches/";
 async function getLaunches() {
     try{
@@ -144,11 +139,70 @@ function nextLaunch(next) {
     clockMinutes.innerHTML = minutes;
     clockHours.innerHTML = hours;
     clockDays.innerHTML = days;
-
     
     })
 }
 
 
+const infoUrl = "https://api.spacexdata.com/v3/info";
+async function getInfo() {
+    try{
+        const response = await fetch(infoUrl);
+        const info = await response.json();
+        companyInfo(info);
+    }
+    catch(error) {
+        console.log("error");
+    }
+    finally {
+        console.log("done");
+    }
+}
+getInfo();
 
+function companyInfo(info) {
+    const spacexText = document.querySelector(".spacex-text");
 
+    spacexText.innerHTML = `<h1>SpaceX</h1>
+                            <p>${info.summary}<p>
+                            <a class="button" href="spacex.html">More about SpaceX</a>`
+}
+
+const upcomingUrl = "https://api.spacexdata.com/v3/launches/upcoming";
+async function getInfo() {
+    try{
+        const response = await fetch(upcomingUrl);
+        const upcoming = await response.json();
+        launchesUpcoming(upcoming);
+    }
+    catch(error) {
+        console.log("error");
+    }
+    finally {
+        console.log("done");
+    }
+}
+getInfo();
+
+function launchesUpcoming(upcoming) {
+
+    const launchContainer = document.querySelector(".launch-container");
+    let html = ""
+
+    
+
+    let upcomingArray = upcoming.length;
+    for(let i = 0; i < upcomingArray; i++) {
+        if(i === 3) break;  
+    
+        html += `<div class="upcoming-info">
+                    <p class="info">${upcoming[i].launch_date_utc}</p>
+                    <p class="info">${upcoming[i].mission_name}</p>
+                    <p class="info">${upcoming[i].launch_site.site_name}</p>
+                </div>`
+
+    
+
+    }
+launchContainer.innerHTML = html
+}

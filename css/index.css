@@ -264,9 +264,12 @@ iframe {
     margin: 0 auto;
 }
 .launch-container {
+  
+    font-size: 0.8em;
+}
+.upcoming-info {
     display: flex;
     justify-content: space-evenly;
-    font-size: 0.8em;
 }
 .launch-container p {
     width: 33.3%;
