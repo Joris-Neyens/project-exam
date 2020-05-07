@@ -17,17 +17,35 @@ async function getLatest() {
 getLatest()
 
 function latestInfo(latestLaunch) {
-    console.log(latestLaunch)
 
-    const launchText = document-querySelector(".launch-text");
-    let html =""
+    const launchText = document.querySelector(".launch-text");
+    launchText.innerHTML = `<h1>Latest Launch</h1>
+                            <h2>${latestLaunch.mission_name}</h2>
+                            <p>${latestLaunch.details}</p>`
 
-    html += `<h1>Latest Launch</h1>
-    <h2></h2>
-    <p></p>
-</div>`
+    const video = document.querySelector("iframe");
+    video.src = `https://www.youtube.com/embed/${latestLaunch.links.youtube_id}`
 
-    launchText.innerHTML = html;
+    const launchDetailsContainer = document.querySelector(".launch-details-container");
+        launchDetailsContainer.innerHTML = `<div class="launch-details">
+                                                <div class="details">
+                                                    <p class="category">Rocket</p>
+                                                    <p class="info">${latestLaunch.rocket.rocket_name}</p>
+                                                </div>
+                                                <div class="details">
+                                                    <p class="category">Launch site</p>
+                                                    <p class="info">${latestLaunch.launch_site.site_name_long}</p>
+                                                </div>
+                                                <div class="details">
+                                                    <p class="category">Payload</p>
+                                                    <p class="info">${latestLaunch.rocket.second_stage.payloads[0].payload_type}</p>
+                                                </div>
+                                                <div class="details">
+                                                    <p class="category">Payload weight</p>
+                                                    <p class="info">${latestLaunch.rocket.second_stage.payloads[0].payload_mass_kg} kg</p>
+                                                </div>
+                                            </div`
+
 }
 
 

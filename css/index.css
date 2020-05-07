@@ -72,6 +72,9 @@ header {
     background-repeat: no-repeat;
     background-color: black;
 }
+.burger {
+    display: none;
+}
 .main-nav {
     padding: 0 0 0 50px;
 }
@@ -416,6 +419,7 @@ iframe {
 .burger {
     padding: 10px;
     float: left;
+    display: block;
 }
 .burger p {
     color: #1AB1E6; 
