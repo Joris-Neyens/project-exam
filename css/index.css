@@ -211,10 +211,6 @@ iframe {
 .details p {
     margin: -8px 0;
 }
-.category {
-    width: 150px;
-    font-weight: 300;
-}
 .details p.info {
     color: white;
 
@@ -256,18 +252,8 @@ iframe {
 
 /*-------Launch-schedule--------*/
 
-.launch-schedule {
-    height: 100vh;
-    display: flex;
-}
 .launch-schedule h2 {
     padding-top: 20px;
-}
-.agenda-container {
-    width: 70%;
-    margin: 0 auto;
-    display: flex;
-    position: relative;
 }
 .launch-agenda {
     width: 60%;
@@ -277,47 +263,33 @@ iframe {
     width: 70%;
     margin: 0 auto;
 }
-.launch-agenda .corner-top {
-    position: absolute;
-    width: 60%;
-}
-.launch-agenda .corner-bottom {
-    position: absolute;
-    width: 60%;
-    bottom: 0;
-    margin-left: -20px;
-    margin-bottom: -30px;
-}
 .launch-container {
     display: flex;
-    padding-top: 20px;
+    justify-content: space-evenly;
     font-size: 0.8em;
 }
-.launch-date .category {
-    width: 80px;
-}
-.category-info .info {
-    width: 200px;
-}
 .launch-container p {
-    margin: 5px 0;
+    width: 33.3%;
 }
 .past-launches a {
     margin-top: 20px;
     line-height: 2;
 }
-.launch-schedule-image {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.launch-schedule-image img {
-    width: 80%;
-}
 .launch-agenda .button {
     position: relative;
     margin: 50px 0 0 20vw;
+}
+.show-more-button {
+    padding: 5px 20px;
+    background: black; 
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    display: inline-block;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 5px;
 }
 /*-------tablet--------*/
 @media screen and (max-width: 1000px) {
@@ -384,17 +356,11 @@ iframe {
         padding-top: 60px;
         margin: 0 auto;
     }
-    .launch-schedule-image {
-        display: none;
-    }
     .launch-agenda {
         width: 70%;
         margin: 0 auto;
     }
     .launch-agenda h1 {
-        margin: 0;
-    }
-    .agenda-container {
         margin: 0;
     }
 
@@ -404,35 +370,34 @@ iframe {
 .background-image {
     background-position: bottom;
 }
-.logo {
+.logo-container {
     position: absolute;
+    width: 40%;
+    left: 30%;
+    right: 50%;
 }
 .logo img {
     width: 40%;
 }
-.tagline {
-    clear: both;
-}
 .main-nav {
     display: none;
 }
+
 .burger {
     padding: 10px;
-    float: left;
     display: block;
+    z-index: 1;
 }
-.burger p {
-    color: #1AB1E6; 
-    line-height: 8px;
-    margin: 0;
-    font-weight: 100;
-    font-size: 7em;
+.burger div {
+    width: 35px;
+    height: 2px;
+    background-color: #1AB1E6;
+    margin: 6px;
 }
 
 .burger-nav {
-    z-index: 100;
     width: 100%;
-    padding-top: 60px; 
+    padding-top: 20px; 
 }
 .burger-nav a {
     text-decoration: none;
@@ -447,10 +412,9 @@ iframe {
     background-color: black;
 }
 .header-content {
-    padding-top: 20vh;
-    
+    padding-top: 20vh;   
 }
 .countdown-container {
-    width: 70%;
+    width: 80%;
 }
 }

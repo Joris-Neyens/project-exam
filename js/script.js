@@ -69,20 +69,17 @@ async function getLaunches() {
 }
 getLaunches();
 
+
 function launchInfo(launches) {
+
 }
-
-
-
-
-
 
 const burger = document.querySelector(".burger")
 const burgerLine = document.querySelectorAll(".burger-line");
 const burgerNav = document.querySelector(".burger-nav");
+const headerContent = document.querySelector(".header-content")
 
 var toggle = 0;
-
 
 burger.onclick = function() {
 
@@ -91,18 +88,66 @@ burger.onclick = function() {
     if(toggle == 0) {
         burgerNav.style.display = "block"
         burgerLine.forEach(function(color) {
-            color.style.color = "white"
+            color.style.backgroundColor = "white"
+        headerContent.style.paddingTop = "0";
         })
         toggle = 1;
     } else if (toggle == 1){
         burgerNav.style.display = "none"
         burgerLine.forEach(function(color) {
-            color.style.color = "#1AB1E6"
+            color.style.backgroundColor = "#1AB1E6"
+        headerContent.style.paddingTop = "20vh";
         })
         toggle = 0;
     }; 
 
 }   
+
+const nextUrl = "https://api.spacexdata.com/v3/launches/next";
+async function getNext() {
+    try{
+        const response = await fetch(nextUrl);
+        const next = await response.json();
+        nextLaunch(next);
+    }
+    catch(error) {
+        console.log("error");
+    }
+    finally {
+        console.log("done");
+    }
+}
+getNext();
+
+
+function nextLaunch(next) {
+    
+    let givenDate = next.launch_date_local;
+    var newDate = Date.parse(givenDate);
+    
+    let interval = setInterval(function() {
+        let now = new Date().getTime();
+
+    let difference = newDate - now;
+
+    let seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    let minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    let hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    
+    const clockSeconds = document.querySelector(".seconds");
+    const clockMinutes = document.querySelector(".minutes");
+    const clockHours = document.querySelector(".hours");
+    const clockDays = document.querySelector(".days");
+
+    clockSeconds.innerHTML = seconds;
+    clockMinutes.innerHTML = minutes;
+    clockHours.innerHTML = hours;
+    clockDays.innerHTML = days;
+
+    
+    })
+}
 
 
 
