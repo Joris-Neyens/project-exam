@@ -183,18 +183,23 @@ function launchesUpcoming(upcoming) {
 
 
     const showMore = document.querySelector(".show-more-button");
+    const buttonHide = document.querySelector(".button.hide")
+    
     showMore.addEventListener("click", showMoreFunction);
 
-    function showMoreFunction() {
+    let toggle = 1
 
-            showMore.outerHTML = `<a class="button" href="launch-schedule.html">Full schedule</a>`
+    function showMoreFunction() {
+        if(toggle == 0) {
+
+            showMore.innerHTML = "Show more v"
             
             const launchContainer = document.querySelector(".launch-container");
             let html = "" 
 
             let upcomingArray = upcoming.length;
             for(let i = 0; i < upcomingArray; i++) {
-                if(i === 6) break;  
+                if(i === 3) break;  
 
                 let launchDate = new Date(upcoming[i].launch_date_utc)
                 let formattedDate = launchDate.getDate() + "-" + (launchDate.getMonth() + 1) + "-" + launchDate.getFullYear() + " " + "UTC";
@@ -207,8 +212,34 @@ function launchesUpcoming(upcoming) {
                         </div>`
             }
             launchContainer.innerHTML = html
-           
-    } 
+            toggle = 1;
+        } else if(toggle == 1) {
+            toggle = 0;
+
+                showMore.innerHTML = `^`
+                showMore.classList.add(`show-less`)
+                buttonHide.style.display = "block"
+
+                const launchContainer = document.querySelector(".launch-container");
+                let html = "" 
+
+                let upcomingArray = upcoming.length;
+                for(let i = 0; i < upcomingArray; i++) {
+                    if(i === 6) break;  
+
+                    let launchDate = new Date(upcoming[i].launch_date_utc)
+                    let formattedDate = launchDate.getDate() + "-" + (launchDate.getMonth() + 1) + "-" + launchDate.getFullYear() + " " + "UTC";
+                    console.log(formattedDate)
+
+                    html += `<div class="upcoming-info">
+                                <p class="info">${formattedDate}</p>
+                                <p class="info">${upcoming[i].mission_name}</p>
+                                <p class="info">${upcoming[i].launch_site.site_name}</p>
+                            </div>`
+                }
+            launchContainer.innerHTML = html
+        }
+    }
 }
 
 const infoUrl = "https://api.spacexdata.com/v3/info";
