@@ -144,36 +144,8 @@ function nextLaunch(next) {
     })
 }
 
-
-
-const infoUrl = "https://api.spacexdata.com/v3/info";
-async function getInfo() {
-    try{
-        const response = await fetch(infoUrl);
-        const info = await response.json();
-        companyInfo(info);
-    }
-    catch(error) {
-        console.log("error");
-    }
-    finally {
-        console.log("done");
-    }
-}
-getInfo();
-
-function companyInfo(info) {
-    const spacexText = document.querySelector(".spacex-text");
-
-    spacexText.innerHTML = `<h1>SpaceX</h1>
-                            <p>${info.summary}<p>
-                            <a class="button" href="spacex.html">More about SpaceX</a>`
-}
-
-
-
 const upcomingUrl = "https://api.spacexdata.com/v3/launches/upcoming";
-async function getInfo() {
+async function getUpcoming() {
     try{
         const response = await fetch(upcomingUrl);
         const upcoming = await response.json();
@@ -186,7 +158,7 @@ async function getInfo() {
         console.log("done");
     }
 }
-getInfo();
+getUpcoming();
 
 function launchesUpcoming(upcoming) {
 
@@ -213,17 +185,16 @@ function launchesUpcoming(upcoming) {
     const showMore = document.querySelector(".show-more-button");
     showMore.addEventListener("click", showMoreFunction);
 
-    let toggle = 1
-
     function showMoreFunction() {
-        if(toggle == 0) {
 
+            showMore.outerHTML = `<a class="button" href="launch-schedule.html">Full schedule</a>`
+            
             const launchContainer = document.querySelector(".launch-container");
             let html = "" 
 
             let upcomingArray = upcoming.length;
             for(let i = 0; i < upcomingArray; i++) {
-                if(i === 3) break;  
+                if(i === 6) break;  
 
                 let launchDate = new Date(upcoming[i].launch_date_utc)
                 let formattedDate = launchDate.getDate() + "-" + (launchDate.getMonth() + 1) + "-" + launchDate.getFullYear() + " " + "UTC";
@@ -236,30 +207,31 @@ function launchesUpcoming(upcoming) {
                         </div>`
             }
             launchContainer.innerHTML = html
-            toggle = 1;
-        } else if(toggle == 1) {
-            toggle = 0;
-
-                const launchContainer = document.querySelector(".launch-container");
-                let html = "" 
-
-                let upcomingArray = upcoming.length;
-                for(let i = 0; i < upcomingArray; i++) {
-                    if(i === 6) break;  
-
-                    let launchDate = new Date(upcoming[i].launch_date_utc)
-                    let formattedDate = launchDate.getDate() + "-" + (launchDate.getMonth() + 1) + "-" + launchDate.getFullYear() + " " + "UTC";
-                    console.log(formattedDate)
-
-                    html += `<div class="upcoming-info">
-                                <p class="info">${formattedDate}</p>
-                                <p class="info">${upcoming[i].mission_name}</p>
-                                <p class="info">${upcoming[i].launch_site.site_name}</p>
-                            </div>`
-                }
-            launchContainer.innerHTML = html
-        }
-    }
+           
+    } 
 }
 
+const infoUrl = "https://api.spacexdata.com/v3/info";
+async function getInfo() {
+    try{
+        const response = await fetch(infoUrl);
+        const info = await response.json();
+        companyInfo(info);
+    }
+    catch(error) {
+        console.log("error");
+    }
+    finally {
+        console.log("done");
+    }
+}
+getInfo();
 
+function companyInfo(info) {
+    console.log(info)
+    const spacexText = document.querySelector(".spacex-text");
+
+    spacexText.innerHTML = `<h1>SpaceX</h1>
+                            <p>${info.summary}<p>
+                            <a class="button" href="spacex.html">More about SpaceX</a>`
+}
