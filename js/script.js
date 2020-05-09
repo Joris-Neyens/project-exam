@@ -193,6 +193,7 @@ function launchesUpcoming(upcoming) {
         if(toggle == 0) {
 
             showMore.innerHTML = "Show more v"
+            buttonHide.style.display = "none"
             
             const launchContainer = document.querySelector(".launch-container");
             let html = "" 
@@ -225,7 +226,6 @@ function launchesUpcoming(upcoming) {
 
                 let upcomingArray = upcoming.length;
                 for(let i = 0; i < upcomingArray; i++) {
-                    if(i === 6) break;  
 
                     let launchDate = new Date(upcoming[i].launch_date_utc)
                     let formattedDate = launchDate.getDate() + "-" + (launchDate.getMonth() + 1) + "-" + launchDate.getFullYear() + " " + "UTC";
@@ -241,6 +241,17 @@ function launchesUpcoming(upcoming) {
         }
     }
 }
+
+const showMore = document.querySelector(".show-more-button");  
+showMore.addEventListener("mouseover", function () {
+        showMore.style.cursor = "pointer";
+    });
+const button = document.querySelector(".button");  
+button.addEventListener("mouseover", function () {
+        button.style.cursor = "pointer";
+    });
+
+
 
 const infoUrl = "https://api.spacexdata.com/v3/info";
 async function getInfo() {
