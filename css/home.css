@@ -1,0 +1,125 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+  }
+
+body {
+    margin: 0;
+    font-family: ubuntu,sans-serif;
+    font-weight: 400;
+    font-size: 0.7em;
+    font-style: normal;
+    color: white;
+}
+header {
+    background-image: url(/images/hiclipart.com.png);
+    background-color: black;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: contain;   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.gradient {
+    background: linear-gradient(black, #098CF6, #C44489);
+    height: 200vh;
+    background-repeat: no-repeat;
+}
+.logo {
+    width: 25%;
+}
+.logo img {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 10px;
+
+}
+.logo-name {
+    color: #098CF6;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+}
+/*--------menu-----------*/
+.navigation-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.burger-button {
+width: 20%;
+margin-top: 25px;
+}
+.burger-line {
+    width: 35px;
+    height: 2px;
+    background-color: #1AB1E6;
+    margin: 6px;
+}
+.main-menu {
+    display: none;
+}
+.burger-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.burger-menu li {
+    padding: 10px 20px 10px 0;
+    text-align: right;
+}
+.burger-menu a {
+    text-decoration: none;
+    color: white;
+}
+/*--------countdown-----------*/
+.countdown-container {
+    padding-top: 50px;
+    width: 70%;
+    margin: 0 auto;
+    color: #1AB1E6;
+}
+.clock {
+    display: flex;
+    justify-content: center;
+}
+.clock-title {
+    margin: 0 auto; 
+    text-align: center;
+}
+.clock-element {
+    width: 25%;
+}
+.clock-element p {
+    text-align: center;
+    margin: 0;
+}
+.number-flex {
+    display: flex;
+    justify-content: center;
+}
+.number-flex p {
+    padding: 0 5px;
+    font-size: 1.2em;
+    font-weight: 600;  
+    width: 18px;
+}
+.mission-date {
+    text-align: right;
+}
+/*--------title-----------*/
+h1 {
+    font-weight: 300;
+    font-size: 1.6em;
+    text-align: center;
+    padding-top: 100px;
+}
+/*--------next-page-----------*/
+.next-page {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 20px;
+}
