@@ -170,9 +170,9 @@ function launchesUpcoming(upcoming) {
         console.log(formattedDate)
 
         html += `<div class="upcoming-info">
-                    <p class="info">${formattedDate}</p>
-                    <p class="info">${upcoming[i].mission_name}</p>
-                    <p class="info">${upcoming[i].launch_site.site_name}</p>
+                    <p class="date">${formattedDate}</p>
+                    <p class="name">${upcoming[i].mission_name}</p>
+                    <p class="site">${upcoming[i].launch_site.site_name}</p>
                 </div>`
     }
     launchContainer.innerHTML = html 
@@ -199,9 +199,9 @@ function launchesUpcoming(upcoming) {
                 console.log(formattedDate)
 
                 html += `<div class="upcoming-info">
-                            <p class="info">${formattedDate}</p>
-                            <p class="info">${upcoming[i].mission_name}</p>
-                            <p class="info">${upcoming[i].launch_site.site_name}</p>
+                            <p class="date">${formattedDate}</p>
+                            <p class="name">${upcoming[i].mission_name}</p>
+                            <p class="site">${upcoming[i].launch_site.site_name}</p>
                         </div>`
             }
             launchContainer.innerHTML = html
@@ -223,9 +223,9 @@ function launchesUpcoming(upcoming) {
                     console.log(formattedDate)
 
                     html += `<div class="upcoming-info">
-                                <p class="info">${formattedDate}</p>
-                                <p class="info">${upcoming[i].mission_name}</p>
-                                <p class="info">${upcoming[i].launch_site.site_name}</p>
+                                <p class="date">${formattedDate}</p>
+                                <p class="name">${upcoming[i].mission_name}</p>
+                                <p class="site">${upcoming[i].launch_site.site_name}</p>
                             </div>`
                 }
             launchContainer.innerHTML = html

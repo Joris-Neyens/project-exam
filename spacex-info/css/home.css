@@ -36,7 +36,7 @@ header {
 
 }
 .logo-name {
-    color: #098CF6;
+    color: white;
     font-weight: 500;
     margin: 0;
     text-align: center;
@@ -48,14 +48,14 @@ header {
     justify-content: space-between;
 }
 .burger-button {
-width: 20%;
-margin-top: 25px;
+    padding-right: 20px;
+    margin-top: 25px;
 }
 .burger-line {
     width: 35px;
     height: 2px;
-    background-color: #1AB1E6;
-    margin: 6px;
+    background-color: white;
+    margin: 7px 0;
 }
 .main-menu {
     display: none;
@@ -64,6 +64,8 @@ margin-top: 25px;
     list-style-type: none;
     padding: 0;
     margin: 0;
+    font-size: 1.6em;
+    font-weight: 300;
 }
 .burger-menu li {
     padding: 10px 20px 10px 0;
@@ -139,10 +141,17 @@ margin-top: 25px;
 }
 /*--------title-----------*/
 h1 {
+    width: 90%;
+    margin: 0 auto;
     font-weight: 300;
     font-size: 1.6em;
-    text-align: center;
     padding-top: 70px;
+}
+.tagline {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 1.2em;
 }
 /*--------next-page-----------*/
 .next-page {
@@ -153,6 +162,9 @@ h1 {
     padding-bottom: 20px;
 }
 /*--------Latest-Launch----------*/
+.upcoming-page {
+    min-height: 100vh;
+}
 h2 {
     margin: 0;
     font-weight: 300;
@@ -201,6 +213,7 @@ h3 {
 }
 iframe {
     width: 100%;
+    height: 200px;
 }
 .more-info-container {
     padding-top: 20px;
@@ -209,13 +222,23 @@ iframe {
 }
 .more-info-container p {
     line-height: 1.7;
+    font-size: 1.2em;
     color: rgb(214, 221, 230);
     max-width: 366px;
 }
 /*-----Upcoming-Launches------*/
 .upcoming-info {
     display: flex;
-    justify-content: space-evenly;
+}
+
+.upcoming-info .date {
+    width: 25%;
+}
+.upcoming-info .name {
+    width: 50%;
+}
+.upcoming-info .site {
+    width: 25%;
 }
 .agenda-container h2 {
     padding-bottom: 20px;
