@@ -13,17 +13,13 @@ burgerButton.onclick = function() {
     if(toggle == 0) {
         burgerMenu.style.display = "block"
         burgerLine.forEach(function(color) {
-            color.style.backgroundColor = "white"
-        countdownContainer.style.paddingTop = "20px"
-        h1.style.paddingTop = "0px"
+            color.style.backgroundColor = "#1AB1E6"
         })
         toggle = 1;
     } else if (toggle == 1){
         burgerMenu.style.display = "none"
         burgerLine.forEach(function(color) {
-            color.style.backgroundColor = "#1AB1E6"
-            countdownContainer.style.paddingTop = "50px"
-            h1.style.paddingTop = "70px"
+            color.style.backgroundColor = "white"
         })
         toggle = 0;
     }; 
