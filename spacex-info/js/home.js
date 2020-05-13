@@ -130,7 +130,7 @@ function latestInfo(latestLaunch) {
     video.src = `https://www.youtube.com/embed/${latestLaunch.links.youtube_id}`
 
     const moreInfoContainer = document.querySelector(".more-info-container");
-    moreInfoContainer.innerHTML = `<p>${latestLaunch.details}</p>`
+    moreInfoContainer.innerHTML = `<h3>Details</h3><p>${latestLaunch.details}</p>`
 
 }
 

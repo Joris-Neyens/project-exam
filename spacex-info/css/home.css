@@ -9,6 +9,9 @@ body {
     font-size: 0.7em;
     font-style: normal;
     color: white;
+    background: linear-gradient(black, #0B314F, #842759);
+    height: 100%;
+    background-repeat: no-repeat;
 }
 header {
     background-image: url(/images/hiclipart.com.png);
@@ -20,13 +23,10 @@ header {
     background-repeat: no-repeat;
     background-position: bottom;
 }
-.gradient {
-    background: linear-gradient(black, #0B314F, #842759);
-    height: 100%;
-    background-repeat: no-repeat;
-}
 .logo {
     width: 25%;
+    display: flex;
+    padding: 20px;
 }
 .logo img {
     display: block;
@@ -39,7 +39,6 @@ header {
     color: white;
     font-weight: 500;
     margin: 0;
-    text-align: center;
 }
 /*--------menu-----------*/
 .navigation-bar {
@@ -232,17 +231,20 @@ iframe {
     width: 90%; 
     margin: 0 auto;
 }
-.more-info-container p {
+.more-info-container p  {
     line-height: 1.7;
     font-size: 1.2em;
     color: rgb(214, 221, 230);
     max-width: 366px;
 }
+.more-info-container h3 {
+    margin: 0;
+    padding-top: 0;
+}
 /*-----Upcoming-Launches------*/
 .upcoming-info {
     display: flex;
 }
-
 .upcoming-info .date {
     width: 25%;
 }
@@ -299,37 +301,131 @@ iframe {
 
 @media only screen and (min-width: 800px) {
 
-body {
-    font-size: 1.2em;
-}
-/*---video-info----------*/
-.video-info-container {
-    display: flex;
-}
-.launch-video {
-    height: 500px;
-    width: 50%;
-}
-.video-container {
-    margin: 0 auto;
-    width: 90%;
-}
-iframe {
-    width: 90%;
-}
-.more-info-container {
-    width: 50%;
-    margin: 0 auto;
-}
-.more-info-container p {
-    max-width: 80%;
-    margin: 0 auto;
-    font-size: 1em;
-}
+    body {
+        font-size: 1.2em;
+        scroll-snap-type: y mandatory;
+        overflow: scroll;
+    }
+    header {
+        scroll-snap-align: start;
+    }
+    section {
+        scroll-snap-align: start;
+    }
+    /*---navigation-bar--------*/
+    .logo  {
+        width: 70%;
+    }
+    a.logo-link {
+        text-decoration: none;
+    }
+    .logo-name {
+        padding: 30px 0 0 5px;
+    }
+    .main-menu {
+        display: block;
+        padding: 20px 80px 0 0;
+    }
+    .main-menu ul {
+        list-style-type: none;
+        display: flex;
+    }
+    .main-menu li {
+        padding: 0 10px;
+    }
+    .main-menu a {
+        text-decoration: none;
+        color: white;
+    }
+    a.current-page {
+        color: #818C98;
+    }
+    .main-menu a:hover {
+        color: #1AB1E6;
+    }
+    .main-menu a:active {
+        color: #098CF6;
+    }
+    .burger-button {
+        display: none;
+    }
+    /*---countdown--------*/
+    .countdown-container {
+        padding-top: 10vh;
+    }
+    h1 {
+        padding-top: 30px;
+    }
+    .tagline {
+        font-size: 1em;
+        padding-top: 5px;
+    }
+    /*---next-page--------*/
+    .next-page p {
+        font-size: 0.8em
+    }
+    .next-page img {
+        width: 3%;
+    }
+    /*---latest-launch---------*/
+    h2 {
+        padding-top: 120px;
+    }
+    .latest-info-page {
+        min-height: 100vh;
+    }
+    .launch-info-flex {
+        width: 80%;
+    }
+    .launch-info-container h3 {
+        text-align: center;
+        width: 80%;
+        padding: 60px 0 30px 0;
+    }
+    .category {
+        width: 40%;
+    }
+    .mission-patch {
+        width: 15%; 
+    }
+    /*---video-info----------*/
+    .video-info-container {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+    }
+    .launch-video {
+        height: 400px;
+        width: 60%;
+    }
+    .video-container {
+        margin: 0 auto;
+        width: 90%;
+    }
+    iframe {
+        width: 90%;
+    }
+    .more-info-container {
+        width: 40%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .more-info-container p {
+        max-width: 80%;
+        margin: 0 auto;
+        font-size: 0.8em;
+    }
+    .more-info-container h3 {
+        width: 80%;
+        margin: 0 auto;
+    }
 
-/*---upcoming----------*/
-.upcoming-info {
-    width: 50%;
-    margin: 0 auto;
-}
+    /*---upcoming----------*/
+    .upcoming-info {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .launch-schedule {
+        min-height: 100vh;
+    }
 }
