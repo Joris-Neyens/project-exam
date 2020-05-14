@@ -137,9 +137,24 @@ p.headquarters {
     height: 60px;
     padding-top: 20px;
 }
+/*--------spacex-info----------*/
+.spacex-info {
+    height: 100vh;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spacex-info-container {
+    
+}
+.summary-container {
 
+}
+.history-intro {
 
-
+}
 
 
 

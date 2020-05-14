@@ -53,6 +53,9 @@ founded.innerHTML = info.founded;
 const employees = document.querySelector(".employees");
 employees.innerHTML = info.employees;
 
+const summary = document.querySelector(".summary");
+summary.innerHTML = info.summary;
+
 
 }
 //flight-amounts
@@ -76,13 +79,5 @@ function pastLaunches(launches) {
 
     const launchesAmound = document.querySelector(".launches");
     launchesAmound.innerHTML = launches.length;
-
-
-    launches.forEach(function(amount) {
-        if(amount.launch_success == true) {
-           console.log(amount.flight_number.length)
-        }
-    })
-    
     
 }    
