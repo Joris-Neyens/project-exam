@@ -16,7 +16,7 @@ body {
     background-repeat: no-repeat;
 }
 h1 {
-    padding-top: 10vh;
+    padding-top: 15vh;
     text-align: center;
     font-weight: 300;
     font-size: 1.6em;
@@ -103,7 +103,7 @@ a {
     text-align: center;
     position: absolute;
     width: 100%;
-    margin-top: 65px;
+    margin-top: 80px;
 }
 .location p {
     margin: 0;
@@ -272,13 +272,6 @@ p.headquarters {
     background: linear-gradient(#842759, #0B314F, #4D3571, #842759);
     height: 100%;
     background-repeat: no-repeat; 
-}
-.line {
-    width: 50%;
-    height: 100px;
-    border: 0;
-    border-right: 2px solid black;
-    border-style: dotted;
 }
 .event-container {
     height: 100vh;
