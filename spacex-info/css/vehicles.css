@@ -1,0 +1,180 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+  }
+
+body {
+    margin: 0;
+    font-family: ubuntu,sans-serif;
+    font-weight: 400;
+    font-size: 0.7em;
+    font-style: normal;
+    color: white;
+}
+.gradient {
+    background: linear-gradient(black, #0B314F, #842759);
+    height: 100%;
+    background-repeat: no-repeat;
+}
+h1 {
+    padding-top: 10vh;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.6em;
+}
+header {    
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header-image {
+    width: 80%;
+    margin: 0 auto;
+}
+.header-image img {
+    width: 80%;
+    transform: rotate(20deg);
+    margin-left: 30px;
+
+}
+.logo {
+    width: 50%;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+}
+.logo img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+.logo-name {
+    color: white;
+    font-weight: 400;
+    font-size: 1.6em;
+    margin: 0;
+}
+/*--------menu-----------*/
+.navigation-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.burger-button {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.burger-line {
+    width: 35px;
+    height: 2px;
+    background-color: white;
+    margin: 5px 0;
+}
+.main-menu {
+    display: none;
+}
+.burger-menu {
+    z-index: 1;
+    position: relative;
+}
+.burger-menu ul {
+    position: fixed;
+    right: 0;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 300;
+}
+.burger-menu li {
+    background: rgba(0,0,0,0.2);
+    padding: 20px 20px 10px 0;
+    text-align: right;
+}
+.burger-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 800px) {
+
+    body {
+        font-size: 1.2em;
+        scroll-snap-type: y mandatory;
+        overflow: scroll;
+    }
+    header {
+        scroll-snap-align: start;
+    }
+    h1 {
+        padding: 0;
+    }
+    section {
+        scroll-snap-align: start;
+    }
+    header {
+        background-size: 350px;
+    }
+    /*---navigation-bar--------*/
+    .logo  {
+        width: 70%;
+    }
+    a.logo-link {
+        text-decoration: none;
+    }
+    .logo-name {
+        padding: 30px 0 0 5px;
+    }
+    .main-menu {
+        display: block;
+        padding: 20px 80px 0 0;
+    }
+    .main-menu ul {
+        list-style-type: none;
+        display: flex;
+    }
+    .main-menu li {
+        padding: 0 10px;
+    }
+    .main-menu a {
+        text-decoration: none;
+        color: white;
+    }
+    a.current-page {
+        color: #818C98;
+    }
+    .main-menu a:hover {
+        color: #1AB1E6;
+    }
+    .main-menu a:active {
+        color: #098CF6;
+    }
+    .burger-button {
+        display: none;
+    }
+    /*--location--------*/
+   
+}
