@@ -105,6 +105,7 @@ function pastLaunches(launches) {
     launchesAmound.innerHTML = launches.length;
     
 }    
+
 //historic events
 const historyUrl = "https://api.spacexdata.com/v3/history";
 async function getHistory() {
@@ -122,6 +123,10 @@ async function getHistory() {
 }
 getHistory();
 
+
+
+
+
 function history(events) {
 
     const historicEvent = document.querySelector(".historic-event");
@@ -129,24 +134,32 @@ function history(events) {
     
     events.forEach (function(event) {
 
+        let flightNumber = ""
+        if (event.flight_number) {
+            flightNumber = `<a href="flight.html?id=${flightNumber}">Flight details</a>`
+            
+        }
+
         let eventDate = new Date(event.event_date_utc)
         let formattedDate = eventDate.getFullYear();
-        console.log(formattedDate)
 
-        html += `   <div class="line"></div> 
-                    <h2>${formattedDate}</h2>
-                    <h3>${event.title}</3>
-                    <p>${event.details}</p>
-                    <div class="history-link-container">
-                        <a href="flight.html?id=${event.flight_number}">Flight details</a>
-                        <a href="${event.article}">Article</a>
+        html += `  <div class="event-container"> 
+                        <div class="year">
+                            <h2>${formattedDate}</h2>
+                        </div>
+                        <h3>${event.title}</h3>
+                        <p>${event.details}</p>
+                        <div class="history-link-container">
+                            ${flightNumber}
+                            <a href="${event.links.article}">Article</a>
+                        </div>
+                        <div class="images"></div>
                     </div>`
-    });
 
-    historicEvent.innerHTML = html;
+    })
     
-};
+historicEvent.innerHTML = html;
 
-
+}
 
 
