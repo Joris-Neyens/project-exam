@@ -144,17 +144,55 @@ a {
 .rocket-info {
     margin: 0 auto;
 }
+/*--------rocket-details-----------*/
 .rocket-details {
     display: flex;
-    justify-content: space-evenly
-}
-.table {
-    display: flex;
-    justify-content: space-evenly; 
 }
 .category {
-    margin-right: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 1em;
+    padding-bottom: 2px;
+    border-bottom: solid white 1px;
 }
+.column:first-of-type {
+    padding-right: 100px;    
+}
+.info {
+    font-size: 1.4em;
+    font-weight: 200;
+    margin: 0;
+}
+.show-images {
+    margin: 20px auto 0;
+    text-align: center;
+    display: flex;
+    width: 20%;
+
+}
+.show-images p {
+    width: 70%;
+    margin: 0;
+}
+.arrow {
+    width: 30%;
+}
+.arrow img {
+    width: 100%;
+}
+.detail-images {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.detail-images img {
+    width: 100%;
+    padding: 20px;
+}
+.hide-image {
+    text-align: center; 
+}
+
 /*--------dragons-----------*/
 .dragons {
     min-height: 100vh;
