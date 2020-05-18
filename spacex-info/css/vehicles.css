@@ -164,7 +164,7 @@ a {
     margin: 0;
 }
 .show-images {
-    margin: 20px auto 0;
+    margin: 20px auto 30px;
     text-align: center;
     display: flex;
     width: 20%;
@@ -180,6 +180,9 @@ a {
 .arrow img {
     width: 100%;
 }
+.collaps-arrow {
+    transform: rotate(180deg);
+}
 .detail-images {
     display: flex;
     flex-direction: column;
@@ -191,8 +194,8 @@ a {
 }
 .hide-image {
     text-align: center; 
+    padding-bottom: 30px;
 }
-
 /*--------dragons-----------*/
 .dragons {
     min-height: 100vh;
@@ -213,8 +216,27 @@ a {
 }
 .dragon-images img {
     width: 100%;
+}
+.show-dragon-images {
+    margin: 20px auto 0;
+    text-align: center;
+    display: flex;
+    width: 20%;
+    padding-bottom: 30px;
 
-    
+}
+.show-dragon-images p {
+    width: 70%;
+    margin: 0;
+}
+.detail-dragon-images {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.detail-dragon-images img {
+    width: 100%;
+    padding: 20px;
 }
 
 
