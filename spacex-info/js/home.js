@@ -163,7 +163,6 @@ function launchesUpcoming(upcoming) {
 
         let launchDate = new Date(upcoming[i].launch_date_utc)
         let formattedDate = launchDate.getDate() + "-" + (launchDate.getMonth() + 1) + "-" + launchDate.getFullYear();
-        console.log(formattedDate)
 
         html += `<div class="upcoming-info">
                     <p class="date">${formattedDate}</p>
@@ -192,7 +191,6 @@ function launchesUpcoming(upcoming) {
 
                 let launchDate = new Date(upcoming[i].launch_date_utc)
                 let formattedDate = launchDate.getDate() + "-" + (launchDate.getMonth() + 1) + "-" + launchDate.getFullYear();
-                console.log(formattedDate)
 
                 html += `<div class="upcoming-info">
                             <p class="date">${formattedDate}</p>
@@ -216,7 +214,6 @@ function launchesUpcoming(upcoming) {
 
                     let launchDate = new Date(upcoming[i].launch_date_utc)
                     let formattedDate = launchDate.getDate() + "-" + (launchDate.getMonth() + 1) + "-" + launchDate.getFullYear();
-                    console.log(formattedDate)
 
                     html += `<div class="upcoming-info">
                                 <p class="date">${formattedDate}</p>

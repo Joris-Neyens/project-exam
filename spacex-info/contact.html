@@ -52,20 +52,21 @@
                     </p>
                     <form>
                         <div class="form-element">
-                            <label for="name" >Name</label>
-                            <input id="name" type="text" name ="name"/>
-                            <p class="name-error" style="display: none">Please enter your name</p>
+                            <label for="name">
+                                <input id="name" type="text" name ="name" placeholder="Name"/>
+                            </label>
                         </div>
                         <div class="form-element">
-                            <label for="email">Email</label>
-                            <input id="email" type="text" name="email"/>
-                            <p class="email-missing-error" style="display: none">Please enter your email address</p>
+                            <label for="email">
+                                <input id="email" type="text" name="email" placeholder="Email"/>
+                            </label>
                             <p class="email-error" style="display: none">Please enter a valid email address</p>
                         </div>
                         <div class="form-element">
-                            <label for="comments">Comments</label>
-                            <textarea id="comments" rows="4" cols="40"></textarea>
-                            <p class="comments-error" style="display: none">Please enter a comment</p>
+                            <label for="comments">
+                                <textarea id="comments" rows="4" cols="40" placeholder="Comments"></textarea>
+                            </label>
+                            <p class="comments-error" style="display: none">Please enter at least 5 characters</p>
                         </div>
                         <div class="form-element">
                             <label for="submit">
@@ -73,6 +74,9 @@
                             </label>
                         </div>
                     </form>
+                    <div class="send-confirmation" style="display: none">
+                        <p>Thank you for your message, you will receive an answer within two working days</p>
+                    </div>
                 </div>
             </div>
         </section>
