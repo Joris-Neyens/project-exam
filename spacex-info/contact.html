@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta charset="description" content="Contact form">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.typekit.net/raq1uwl.css">
+        <link rel="stylesheet" href="css/contact.css" type="text/css">
+        <title>SpaceX Info | Contact</title>
+    </head>
+    <body> 
+        <header>
+            <div class="navigation-bar">
+                <a class="logo-link" href="home.html" alt="link to homepage">
+                    <div class="logo">
+                        <img src="images/logo-black-white.png" title="SpaceX Info Logo" alt="SpaceX Info logo rocket">
+                        <p class="logo-name">SpaceX Info</p>
+                    </div>
+                </a>
+                <div class="burger-button">
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                </div>
+                <div class="main-menu">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="spacex.html" alt="link to spacex page">SpaceX</a></li>
+                        <li><a href="vehicles.html" alt="link to vehicles page">Vehicles</a></li>
+                        <li><a class="current-page" href="contact.html" alt="link to contact page">Contact</a></li>
+                    </ul>   
+                </div>
+            </div>
+            <div class="burger-menu" style="display: none">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="spacex.html">SpaceX</a></li>
+                    <li><a href="vehicles.html">Vehicles</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>  
+            </div>
+            <h1>Contact</h1>
+        </header>
+        <section>
+            <div class="site-info">
+                <div class="site-info-container"></div>
+            </div>
+            <div class="contact-form">
+                <div>
+                    <p>If you would like to contact the maker of this website, please
+                        use the contact form below.
+                    </p>
+                    <form>
+                        <div class="form-element">
+                            <label for="name" >Name</label>
+                            <input id="name" type="text" name ="name"/>
+                            <p class="name-error" style="display: none">Please enter your name</p>
+                        </div>
+                        <div class="form-element">
+                            <label for="email">Email</label>
+                            <input id="email" type="text" name="email"/>
+                            <p class="email-missing-error" style="display: none">Please enter your email address</p>
+                            <p class="email-error" style="display: none">Please enter a valid email address</p>
+                        </div>
+                        <div class="form-element">
+                            <label for="comments">Comments</label>
+                            <textarea id="comments" rows="4" cols="40"></textarea>
+                            <p class="comments-error" style="display: none">Please enter a comment</p>
+                        </div>
+                        <div class="form-element">
+                            <label for="submit">
+                                <button id="submit" type="submit">Submit</button>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+            <script src="js/contact.js"></script>
+        </body>
+    </html> 
+    
