@@ -136,9 +136,10 @@ function history(events) {
 
         let flightNumber = ""
         if (event.flight_number) {
-            flightNumber = `<a href="flight.html?id=${flightNumber}">Flight details</a>`
+            flightNumber = `<a href="flight.html?id=${event.flight_number}">Flight Details</a>`
             
         }
+        console.log(flightNumber)
 
         let eventDate = new Date(event.event_date_utc)
         let formattedDate = eventDate.getFullYear();
