@@ -16,15 +16,9 @@ burgerButton.onclick = function() {
 
     if(toggle == 0) {
         burgerMenu.style.display = "block"
-        burgerLine.forEach(function(color) {
-            color.style.backgroundColor = "#1AB1E6"
-        })
         toggle = 1;
     } else if (toggle == 1){
         burgerMenu.style.display = "none"
-        burgerLine.forEach(function(color) {
-            color.style.backgroundColor = "white"
-        })
         toggle = 0;
     }; 
 }
@@ -257,11 +251,14 @@ function launchesUpcoming(upcoming) {
 }
 
 const showMore = document.querySelector(".show-more-button");  
-showMore.addEventListener("mouseover", function () {
+showMore.addEventListener("mouseover", function () {    
         showMore.style.cursor = "pointer";
-    });
+        showMore.style.background = "#C44489";
+});
+showMore.addEventListener("mouseout", function() {
+    showMore.style.background = "linear-gradient(90deg, #098CF6, #1AB1E6)";
+});
 const button = document.querySelector(".button");  
 button.addEventListener("mouseover", function () {
         button.style.cursor = "pointer";
-    });
-
+});

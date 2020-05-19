@@ -40,9 +40,9 @@ a {
 .logo-name {
     color: white;
     font-weight: 500;
-    font-size: 1.6em;
+    font-size: 1.4rem;
     margin: 0 0 0 5px;
-    line-height: 1em;
+    line-height: 1.4rem;
 }
 /*-------main-menu-----------*/
 .navigation-bar {
@@ -80,7 +80,7 @@ a {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    font-size: 1.8em;
+    font-size: 1.8rem;
     font-weight: 400;
     z-index: 2;
 }
@@ -98,7 +98,7 @@ a {
 }
 /*--------countdown-----------*/
 .countdown-container {
-    padding-top: 100px;
+    padding-top: 50px;
     width: 70%;
     max-width: 300px;
     margin: 0 auto;
@@ -133,7 +133,7 @@ a {
 .clock-title {
     margin: 0 auto; 
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     padding-bottom: 5px;
 }
 .clock-element {
@@ -148,35 +148,35 @@ a {
     justify-content: center;
 }
 .number-flex p {
-    font-size: 2.2em;
+    font-size: 1.8rem;
     font-weight: 900;  
     width: 18px;
     margin-bottom: 5px;
     
 }
 .mission-name {
-    font-size: 1em;
+    font-size: 1rem;
     padding: 5px 0 15px 5px;
 }
 .mission-date {
     text-align: right;
-    font-size: 1em;
-    padding-top: 15px;
+    font-size: 1rem;
+    padding: 15px 5px 0 0;
 }
 /*--------title-----------*/
 h1 {
     width: 90%;
     margin: 0 auto;
     font-weight: 700;
-    font-size: 2em;
-    padding-top: 140px;
+    font-size: 1.4rem;
+    padding-top: 100px;
     text-align: center;
     text-transform: uppercase;
 }
 .tagline {
     width: 90%;
     margin: 0 auto;
-    font-size: 1.4em;
+    font-size: 1rem;
     text-align: center;
 }
 /*--------next-page-----------*/
@@ -185,11 +185,12 @@ h1 {
     text-align: center;
     position: absolute;
     bottom: 0;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
 }
 .next-page p {
     margin: 5px 0;
-    font-size: 1.2em;
+    font-size: 1rem;
+    font-weight: 500;
 }
 .next-page img {
     width: 7%;
@@ -198,7 +199,7 @@ h1 {
 h2 {
     margin: 0;
     font-weight: 700;
-    font-size: 1.8em;
+    font-size: 1.4rem;
     text-align: center;
     padding-top: 40px;
     text-transform: uppercase;
@@ -206,7 +207,7 @@ h2 {
 h3 {
     width: 90%;
     font-weight: 500;
-    font-size: 1.4em;
+    font-size: 1.2rem;
     padding: 30px 0 10px 0;
     margin: 0 auto;
     text-transform: uppercase;
@@ -214,7 +215,7 @@ h3 {
 .details {
     display: flex;
     margin: 0 auto;
-    font-size: 1.2em;
+    font-size: 1rem;
 }
 .category {
     width: 50%;
@@ -261,7 +262,7 @@ iframe {
 }
 .more-info-container p  {
     line-height: 1.7;
-    font-size: 1.2em;
+    font-size: 1rem;
     color: rgb(214, 221, 230);
     max-width: 366px;
 }
@@ -286,7 +287,7 @@ iframe {
 }
 .arrow {
     padding-left: 10px;
-    font-size: 1.2em;
+    font-size: 1rem;
 }
 .arrow p {
     width: 5%;
@@ -324,12 +325,12 @@ iframe {
 }
 .show-more-button {
     text-align: center;
-    padding: 3px;
+    padding: 0.2em;
     background: linear-gradient(90deg, #098CF6, #1AB1E6);
     border-radius: 5px; 
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.4em;
+    font-size: 1rem;
     width: 200px;
     margin: 0 auto;
 }
@@ -385,9 +386,6 @@ iframe {
         display: none;
     }
     /*---countdown--------*/
-    .countdown-container {
-        padding-top: 10vh;
-    }
     h1 {
         padding-top: 30px;
     }
