@@ -2,127 +2,121 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta charset="description" content="Homepage SpaceX Info">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://use.typekit.net/raq1uwl.css">
         <link rel="stylesheet" href="css/index.css" type="text/css">
         <title>SpaceX Mission Tracker | Homepage</title>
     </head>
-    <body>  
-            <header>
-                <div class="background-image"> 
-                    <div class="top-bar">
-                        <div class="logo-container">
-                            <div class="logo">
-                                <img src="/images/spacex-white.png">
-                            </div>
-                            <div class="tagline">
-                                <p>SpaceX Mission Tracker</p>
-                            </div>
-                        </div>
-                        <div class="burger">
-                            <div class="burger-line"></div>
-                            <div class="burger-line"></div>
-                            <div class="burger-line"></div>
-                        </div>
+    <body> 
+        <header>
+            <div class="navigation-bar">
+                <a class="logo-link" href="index.html" alt="link to homepage">
+                    <div class="logo">
+                        <img src="images/logo-black-white.png" title="SpaceX Info Logo" alt="SpaceX Info logo rocket">
+                        <p class="logo-name">SpaceX Info</p>
                     </div>
-                    <div class="burger-nav" style="display: none">
-                        <ul>
-                            <li><a href="">Home</a></li>
-                            <li><a href="spacex.html">SpaceX</a></li>
-                            <li><a href="launch-schedule.html">Launch Schedule</a></li>
-                            <li><a href="Contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="main-nav">
-                        <ul>
-                            <li><a class="active-link" href="">Home</a></li>
-                            <li>|</li>
-                            <li><a href="spacex.html">SpaceX</a></li>
-                            <li>|</li>
-                            <li><a href="launch-schedule">Launch Schedule</a></li>
-                            <li>|</li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="header-content">
-                        <div class="countdown-container">       
-                            <img class="corner-top" src="images/top-line.svg">
-                            <div class="mission-name"><p>Starlink 8</p></div>
-                            
-                                <div class="clock-container">
-                                    <p class="clock-title">NEXT LAUNCH</p>
-                                    <div class="clock">
-                                        <div>
-                                            <div class="number-flex">
-                                                <p class="days">30</p>
-                                                <p>|</p>
-                                            </div>
-                                            <p>days</p>
-                                        </div>
-                                        <div>
-                                            <div class="number-flex">
-                                                <p class="hours">01</p>
-                                                <p>|</p>
-                                            </div>
-                                            <p>hours</p>
-                                        </div>
-                                        <div>
-                                            <div class="number-flex">
-                                                <p class="minutes">05</p>
-                                                <p>|</p>
-                                            </div>
-                                            <p>minutes</p>
-                                        </div>
-                                        <div>
-                                            <div class="number-flex">
-                                                <p class="seconds">46</p>
-                                                <p>|</p>
-                                            </div>
-                                            <p>seconds</p>
-                                        </div>
-                                    </div>
-                                    <div class="mission-date"><p>05.06.2020</p></div>
+                </a>
+                <div class="burger-button">
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                </div>
+                <div class="main-menu">
+                    <ul>
+                        <li class="current-page"><a href="index.html" alt="link to homepage">Home</a></li>
+                        <li><a href="spacex.html" alt="link to spacex page">SpaceX</a></li>
+                        <li><a href="vehicles.html" alt="link to vehicles page">Vehicles</a></li>
+                        <li><a href="contact.html" alt="link to contact page">Contact</a></li>
+                    </ul>   
+                </div>
+            </div>
+            <div class="burger-menu" style="display: none">
+                <ul>
+                    <li class="current-page"><a href="index.html" alt="link to homepage">Home</a></li>
+                    <li><a href="spacex.html" alt="link to spacex page">SpaceX</a></li>
+                    <li><a href="vehicles.html" alt="link to vehicles page">Vehicles</a></li>
+                    <li><a href="contact.html" alt="link to contact page">Contact</a></li>
+                </ul>  
+            </div>
+            <div class="page-header">
+                <h1>SpaceX info</h1>
+                <p class="tagline">Follow the latest developments of Spacex</p>
+            </div>
+            <div class="countdown-container">       
+                <div class="top-right">
+                    <img src="images/top-line.svg">
+                </div> 
+                <div class="mission-name"><p>Starlink 8</p></div>
+                <div class="clock-container">
+                    <p class="clock-title">NEXT LAUNCH</p>
+                        <div class="clock">
+                            <div class="clock-element">
+                                <div class="number-flex">
+                                    <p class="days">30</p>
                                 </div>
-                            <img class="corner-bottom" src="images/bottom-line.svg">
+                                <p>days</p>
+                            </div>
+                            <div class="clock-element">
+                                <div class="number-flex">
+                                    <p class="hours">01</p>
+                                </div>
+                                <p>hours</p>
+                                </div>
+                            <div class="clock-element">
+                                <div class="number-flex">
+                                    <p class="minutes">05</p>
+                                </div>
+                                <p>minutes</p>
+                            </div>
+                            <div class="clock-element">
+                                <div class="number-flex">
+                                    <p class="seconds">46</p>
+                                </div>
+                                <p>seconds</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </header> 
-            <section class="latest-launch">
-                <div class="latest-launch-info">
-                    <div class="launch-text">
-                    </div>
-                </div>
-                <div class="latest-launch-video">
-                    <iframe src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="launch-details-container">
-                    </div>
-                </div>   
-            </section> 
-            <section class="launch-schedule">
-                <div class="launch-agenda">
-                    <div class="agenda-container">
-                        <h1>Upcoming</h1>
-                        <div class="launch-container">  
+                        <div class="bottom-left">
+                            <img src="images/bottom-line.svg">
                         </div> 
-                    </div>
-                    <div class="showmore-button-container">
-                        <p class="show-more-button">show more v</p>
-                        <a class="button hide">Full schedule</a>
-                    </div>
+                        <div class="mission-date"><p>05.06.2020</p></div>    
                 </div>
-            </section> 
-            <section>
-                <div class="spacex">
-                    <div class="spacex-info">
-                        <div class="spacex-text">
+            </div>
+            <div class="next-page">
+                <p>Space X launches</p>
+                <a href="#latest-launch">
+                    <img src="images/arrow-white.png">
+                </a>
+            </div>
+        </header>
+        <section class="upcoming-page">
+            <div class="latest-info-page">
+                <h2 id="latest-launch">Latest Launch</h2>
+                <div class="launch-info-container">
+                </div>
+            </div>
+                <div class="video-info-container">
+                    <div class="launch-video">
+                        <div class="video-container">
+                            <iframe src="" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
-                    <div class="spacex-image">
-                        <img src="images/spacex-sattelite.png">
+                    <div class="more-info-container">
                     </div>
                 </div>
-            </section>   
-        <script src="/js/script.js"></script>
+        </section>
+        <section class="launch-schedule">
+            <div class="launch-agenda">
+                <div class="agenda-container">
+                    <h2>Upcoming launches</h2>
+                    <div class="launch-container">  
+                    </div> 
+                </div>
+                <div class="showmore-button-container">
+                    <p class="show-more-button">show more</p>
+                </div>
+            </div>
+        </section> 
+        <script src="js/index.js"></script>
     </body>
-</html>
+</html> 

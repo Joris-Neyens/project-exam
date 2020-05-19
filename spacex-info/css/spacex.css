@@ -48,13 +48,16 @@ a {
     color: white;
     font-weight: 400;
     font-size: 1.6em;
-    margin: 0;
+    margin: 0 0 0 5px;
 }
 /*--------menu-----------*/
 .navigation-bar {
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+.main-menu {
+    display: none;
 }
 .burger-button {
     padding: 15px;
@@ -70,9 +73,6 @@ a {
     height: 2px;
     background-color: white;
     margin: 5px 0;
-}
-.main-menu {
-    display: none;
 }
 .burger-menu {
     z-index: 1;

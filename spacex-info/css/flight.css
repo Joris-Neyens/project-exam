@@ -161,9 +161,6 @@ section {
         text-decoration: none;
         color: white;
     }
-    a.current-page {
-        color: #818C98;
-    }
     .main-menu a:hover {
         color: #1AB1E6;
     }

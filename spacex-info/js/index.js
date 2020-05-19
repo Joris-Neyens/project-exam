@@ -8,6 +8,10 @@ const countdownContainer = document.querySelector(".countdown-container")
 
 let toggle = 0;
 
+burgerButton.onmouseover = function() {
+    burgerButton.style= "cursor: pointer;"
+}
+
 burgerButton.onclick = function() {
 
     if(toggle == 0) {
@@ -24,6 +28,22 @@ burgerButton.onclick = function() {
         toggle = 0;
     }; 
 }
+// hamburger dissapear on scroll
+
+let scrollPosition = window.pageYOffset;
+    window.addEventListener("scroll", scrollEvent);
+
+    function scrollEvent() {
+        const currentPosition = window.pageYOffset;
+        if(scrollPosition > currentPosition) {
+            burgerButton.style.top = "0";
+        } else {
+            burgerButton.style.top = "-70px";
+            burgerMenu.style.display = "none";
+        }
+    scrollPosition = currentPosition;
+}
+
 
 //Countdown
 const nextUrl = "https://api.spacexdata.com/v3/launches/next";
@@ -164,11 +184,14 @@ function launchesUpcoming(upcoming) {
         let launchDate = new Date(upcoming[i].launch_date_utc)
         let formattedDate = launchDate.getDate() + "-" + (launchDate.getMonth() + 1) + "-" + launchDate.getFullYear();
 
-        html += `<div class="upcoming-info">
-                    <p class="date">${formattedDate}</p>
-                    <p class="name">${upcoming[i].mission_name}</p>
-                    <p class="site">${upcoming[i].launch_site.site_name}</p>
-                </div>`
+        html += `<a class="flight-link" href="flight.html?id=${upcoming[i].flight_number}">
+                    <div class="upcoming-info">
+                        <p class="date">${formattedDate}</p>
+                        <p class="name">${upcoming[i].mission_name}</p>
+                        <p class="site">${upcoming[i].launch_site.site_name}</p>
+                        <p class="arrow">></p>
+                    </div>
+                </a>`
     }
     launchContainer.innerHTML = html 
 
@@ -180,7 +203,7 @@ function launchesUpcoming(upcoming) {
     function showMoreFunction() {
         if(toggle == 0) {
 
-            showMore.innerHTML = "Show more v" 
+            showMore.innerHTML = "show more" 
 
             const launchContainer = document.querySelector(".launch-container");
             let html = "" 
@@ -192,13 +215,17 @@ function launchesUpcoming(upcoming) {
                 let launchDate = new Date(upcoming[i].launch_date_utc)
                 let formattedDate = launchDate.getDate() + "-" + (launchDate.getMonth() + 1) + "-" + launchDate.getFullYear();
 
-                html += `<div class="upcoming-info">
-                            <p class="date">${formattedDate}</p>
-                            <p class="name">${upcoming[i].mission_name}</p>
-                            <p class="site">${upcoming[i].launch_site.site_name}</p>
-                        </div>`
+                html += `<a class="flight-link" href="flight.html?id=${upcoming[i].flight_number}">
+                            <div class="upcoming-info">
+                                <p class="date">${formattedDate}</p>
+                                <p class="name">${upcoming[i].mission_name}</p>
+                                <p class="site">${upcoming[i].launch_site.site_name}</p>
+                                <p class="arrow">></p>
+                            </div>
+                        </a>`
             }
             launchContainer.innerHTML = html
+            
             toggle = 1;
         } else if(toggle == 1) {
             toggle = 0;
@@ -215,11 +242,14 @@ function launchesUpcoming(upcoming) {
                     let launchDate = new Date(upcoming[i].launch_date_utc)
                     let formattedDate = launchDate.getDate() + "-" + (launchDate.getMonth() + 1) + "-" + launchDate.getFullYear();
 
-                    html += `<div class="upcoming-info">
-                                <p class="date">${formattedDate}</p>
-                                <p class="name">${upcoming[i].mission_name}</p>
-                                <p class="site">${upcoming[i].launch_site.site_name}</p>
-                            </div>`
+                    html += `<a class="flight-link" href="flight.html?id=${upcoming[i].flight_number}">
+                                <div class="upcoming-info">
+                                    <p class="date">${formattedDate}</p>
+                                    <p class="name">${upcoming[i].mission_name}</p>
+                                    <p class="site">${upcoming[i].launch_site.site_name}</p>
+                                    <p class="arrow">></p>
+                                </div>
+                            </a>`
                 }
             launchContainer.innerHTML = html
         }

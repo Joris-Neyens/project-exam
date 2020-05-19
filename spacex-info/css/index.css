@@ -1,426 +1,466 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+  }
+
 body {
     margin: 0;
     font-family: brandon-grotesque, sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: white;
-    background-color: black;
-}
-h1 {
-    font-weight: 400;
-    font-size: 2.2em;
-    text-transform: uppercase;
-    margin: 0;
-}
-h2 {
-    font-weight: 400;
-    font-size: 1.8em;
-    text-transform: uppercase;
-    margin: 0;
-}
-.button {
-    padding: 5px 20px;
-    background: rgb(9,140,246);
-    background: linear-gradient(90deg, rgba(9,140,246,1) 15%, rgba(26,177,230,1) 77%); 
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.2em;
-    display: inline-block;
-    text-align: center;
-    border-radius: 5px;
-}
-.button:hover {
-    background: #C44489;
-}
-p {
-    color: #A6B5C6; 
-    font-size: 1.2em;
-}
-.main-nav a.active-link {
-    color: white;
+    font-size: 0.8em;
+    font-style: normal;
+    color: #E3E3E3;
+    background: linear-gradient(black, #0B314F, #842759);
+    height: 100%;
+    background-repeat: no-repeat;
 }
 header {
-    height: 100vh;
-}
-.logo {
-    width: 100%;
-    height: auto;
-}
-.logo img {
-    display: block;
-    width: 20%;
-    margin: 0 auto;
-    padding: 10px 0 0 40px;
-}
-.tagline {
-    text-align: center;
-    margin: 10px 0 20px 0;
-}
-.tagline p {
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 0.9em;
-    color: white;
-}
-.background-image {
     background-image: url(/images/hiclipart.com.png);
+    background-repeat: no-repeat;
     height: 100vh;
     background-size: contain;   
     background-position: center;
     background-repeat: no-repeat;
-    background-color: black;
+    background-position: bottom;
 }
-.burger {
+.logo {
+    width: 45%;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+}
+.logo img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+.logo-name {
+    color: white;
+    font-weight: 500;
+    font-size: 1.6em;
+    margin: 0 0 0 5px;
+    line-height: 1em;
+}
+/*-------main-menu-----------*/
+.navigation-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.main-menu {
     display: none;
 }
-.main-nav {
-    padding: 0 0 0 50px;
-}
-.main-nav ul {
+.burger-button {
+    padding: 16px;
     display: flex;
-    font-size: 1.2em; 
+    flex-direction: column;
+    background: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    transition: top 0.2s;
+}
+.burger-line {
+    width: 35px;
+    height: 2px;
+    background-color: #E3E3E3;
+    margin: 5px 0;
+}
+.burger-menu {
+    position: relative;
+}
+.burger-menu ul {
+    position: fixed;
+    right: 0;
+    width: 100%;
+    list-style-type: none;
     padding: 0;
     margin: 0;
+    font-size: 1.8em;
+    font-weight: 400;
+    z-index: 2;
 }
-.main-nav li {
-    list-style-type: none;
-    padding: 0 5px;
-    color: #A6B5C6;
+.burger-menu li {
+    background: rgba(0,0,0,0.2);
+    padding: 20px 20px 10px 0;
+    text-align: right;
 }
-.main-nav a {
+.burger-menu a {
     text-decoration: none;
-    color: #A6B5C6;
-}
-.main-nav a:hover {
     color: white;
 }
+.current-page a {
+    color: #818C98;
+}
+/*--------countdown-----------*/
 .countdown-container {
+    padding-top: 100px;
+    width: 70%;
+    max-width: 300px;
+    margin: 0 auto;
+    color: #1AB1E6;
     position: relative;
-    width: 30%;
 }
-.countdown-container .corner-top {
-    position: absolute; 
-    top:0;
+.top-right {
+    width: 70%;
+}
+.top-right img {
+    width: 55%;
+    position: absolute;
     right: 0;
-    width: 50%; 
 }
-.countdown-container .corner-bottom {
-    position: absolute; 
+.bottom-left {
+    width: 70%;
+}
+.bottom-left img {
+    width: 55%;
+    position: absolute;
     bottom: 0;
-    left: 0;
-    width: 50%; 
-}
-.mission-name p {
-    position: absolute;
-    text-transform: uppercase;
-    font-size: 0.8em !important;
-}
-.mission-date p {
-    position: absolute;
-    right: 0;
-    font-size: 0.8em !important;
-}
-.header-content {
-    display: flex;
-    padding-top: 18vh;
-}
-h1 {
-    font-weight: 400;
-    font-size: 2.2em;
-    text-transform: uppercase;
-    margin: 0;
-}
-.countdown-container {
-    height: 15%;
-    margin: auto;
-}
-.clock-title {
-    text-align: center;
-}
-.countdown-container p {
-    font-size: 1em;
-    font-weight: 300;
-    margin: 0;
-    color: #1AB1E6;  
-}
-.clock-container {
-    padding: 20px 20px;
 }
 .clock {
     display: flex;
     justify-content: center;
+    max-width: 200px;
+    margin: 0 auto;
 }
-p.number {
-    font-weight: 700;
+.clock-container {
+    position: relative;
 }
-.number-flex {
-    font-size: 2em;
-    font-weight: 500;
+.clock-title {
+    margin: 0 auto; 
+    text-align: center;
+    font-size: 1.2em;
+    padding-bottom: 5px;
+}
+.clock-element {
+    width: 25%;
+}
+.clock-element p {
+    text-align: center;
+    margin: 0;
 }
 .number-flex {
     display: flex;
+    justify-content: center;
 }
 .number-flex p {
-    padding: 0 5px;
+    font-size: 2.2em;
+    font-weight: 900;  
+    width: 18px;
+    margin-bottom: 5px;
+    
 }
-/*-------Latest-Launch--------*/
-.latest-launch {
-    display: flex;
-    height: 100vh;
+.mission-name {
+    font-size: 1em;
+    padding: 5px 0 15px 5px;
 }
-.latest-launch-info {
- width: 50%;
+.mission-date {
+    text-align: right;
+    font-size: 1em;
+    padding-top: 15px;
 }
-.launch-text {
-    width: 70%;
+/*--------title-----------*/
+h1 {
+    width: 90%;
     margin: 0 auto;
-    padding-top: 20vh;
+    font-weight: 700;
+    font-size: 2em;
+    padding-top: 140px;
+    text-align: center;
+    text-transform: uppercase;
 }
-.launch-text p {
-    line-height: 1.7;
-}
-.launch-text h2 {
-    margin-top: 30px;
-}
-.latest-launch-video {
-    width: 50%;
-}
-iframe {
-    display: block;
+.tagline {
+    width: 90%;
     margin: 0 auto;
-    padding-top: 15vh;
-    width: 560px;
-    height: 315px;
+    font-size: 1.4em;
+    text-align: center;
 }
-.launch-details-container {
+/*--------next-page-----------*/
+.next-page {
     width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 20px;
 }
-.launch-details {
-    width: 80%;
+.next-page p {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+.next-page img {
+    width: 7%;
+}
+/*--------Latest-Launch----------*/
+h2 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.8em;
+    text-align: center;
+    padding-top: 40px;
+    text-transform: uppercase;
+}
+h3 {
+    width: 90%;
+    font-weight: 500;
+    font-size: 1.4em;
+    padding: 30px 0 10px 0;
     margin: 0 auto;
-    margin-top: 20px;
-    padding: 10px;
-    font-size: 0.8em;
+    text-transform: uppercase;
 }
 .details {
     display: flex;
-    padding: 10px;
-}
-.details p {
-    margin: -8px 0;
-}
-.details p.info {
-    color: white;
-
-}
-/*-------SpaceX--------*/
-.spacex {
-    display: flex;
-    height: 100vh;
-}
-.spacex-info {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.spacex-image {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.spacex-text {
-    width: 70%;
     margin: 0 auto;
-    padding-top: 20vh;
+    font-size: 1.2em;
 }
-.spacex-text p {
-    line-height: 1.7;
-    padding-bottom: 10px;
+.category {
+    width: 50%;
+    max-width: 120px;
+    margin: 5px 0;
 }
-.spacex .button {
-    font-size: 1em;
-    line-height: 1.5;
+.info {
+    width: 50%;
+    margin: 5px 0;
+    font-weight: 500;
 }
-.spacex-image img {
-    width: 80%;
-    transform: rotate(20deg);
+.launch-info {
+    width: 70%;
 }
-
-/*-------Launch-schedule--------*/
-
-.launch-schedule h2 {
+.launch-info-flex {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+.mission-patch {
+    width: 30%;
+}
+.mission-patch img {
+    width: 100%;
+    margin: 0 auto;
+}
+.launch-video {
+    position: relative;
+    width: 90%;
+    height: 300px;
+    margin: 0 auto;
+    padding-top: 40px;
+    z-index: 1;
+}
+iframe {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+}
+.more-info-container {
     padding-top: 20px;
-}
-.launch-agenda {
-    width: 60%;
-    padding-top: 8vh;
-}
-.launch-agenda h1 {
-    width: 70%;
+    width: 90%; 
     margin: 0 auto;
 }
-.launch-container {
-  
-    font-size: 0.8em;
+.more-info-container p  {
+    line-height: 1.7;
+    font-size: 1.2em;
+    color: rgb(214, 221, 230);
+    max-width: 366px;
 }
+.more-info-container h3 {
+    margin: 0;
+    padding: 0;
+}
+/*-----Upcoming-Launches------*/
 .upcoming-info {
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 5%;
 }
-.launch-container p {
-    width: 33.3%;
+.upcoming-info .date {
+    width: 25%;
+}
+.upcoming-info .name {
+    width: 70%;
+}
+.upcoming-info .site {
+    display: none;
+}
+.arrow {
+    padding-left: 10px;
+    font-size: 1.2em;
+}
+.arrow p {
+    width: 5%;
+}
+.flight-link {
+    color: white;
+}
+.flight-link .upcoming-info:hover {
+    background-color: rgba(26, 177, 230, 0.2);
+}
+.flight-link .upcoming-info:active {
+    background-color: rgba(26, 177, 230, 0.2);
+}
+.agenda-container h2 {
+    padding-bottom: 20px;
+}
+.launch-container {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;
 }
 .past-launches a {
     margin-top: 20px;
     line-height: 2;
 }
+.launch-agenda {
+    padding-bottom: 60px;
+}
 .launch-agenda .button {
     position: relative;
     margin: 50px 0 0 20vw;
 }
+.show-more-button-container {
+    width: 90%;
+}
 .show-more-button {
-    padding: 5px 20px;
-    background: black; 
-    color: white;
+    text-align: center;
+    padding: 3px;
+    background: linear-gradient(90deg, #098CF6, #1AB1E6);
+    border-radius: 5px; 
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.2em;
-    display: inline-block;
-    text-align: center;
-    border: 2px solid white;
-    border-radius: 5px;
+    font-size: 1.4em;
+    width: 200px;
+    margin: 0 auto;
 }
-.hide {
-    display: none;
-}
-/*-------tablet--------*/
-@media screen and (max-width: 1000px) {
-    .logo img {
-        width: 20%;
+
+@media only screen and (min-width: 800px) {
+
+    body {
+        font-size: 1.2em;
+        scroll-snap-type: y mandatory;
+        overflow: scroll;
     }
-    p {
-        font-size: 1.1em;
-        line-height: 1.7;
+    header {
+        scroll-snap-align: start;
     }
-    .launch-details {
-        font-size: 0.9em;
+    section {
+        scroll-snap-align: start;
     }
-    .launch-details .category {
-        width: 120px;
+    /*---navigation-bar--------*/
+    .logo  {
+        width: 70%;
     }
-    .details {
-        padding-left: 40px;
+    a.logo-link {
+        text-decoration: none;
     }
-    iframe {
-        width: 80%;
-        height: 30%;
-        padding-top: 20vh;
+    .logo-name {
+        padding: 30px 0 0 5px;
     }
-}
-    @media screen and (max-width: 880px) {
+    .main-menu {
+        display: block;
+        padding: 20px 80px 0 0;
+    }
+    .main-menu ul {
+        list-style-type: none;
+        display: flex;
+    }
+    .main-menu li {
+        padding: 0 10px;
+    }
+    .main-menu a {
+        text-decoration: none;
+        color: white;
+    }
+    a.current-page {
+        color: #818C98;
+    }
+    .main-menu a:hover {
+        color: #1AB1E6;
+    }
+    .main-menu a:active {
+        color: #098CF6;
+    }
+    .burger-button {
+        display: none;
+    }
+    /*---countdown--------*/
     .countdown-container {
+        padding-top: 10vh;
+    }
+    h1 {
+        padding-top: 30px;
+    }
+    .tagline {
+        font-size: 1em;
+        padding-top: 5px;
+    }
+    /*---next-page--------*/
+    .next-page p {
+        font-size: 0.8em
+    }
+    .next-page img {
+        width: 3%;
+    }
+    /*---latest-launch---------*/
+    h2 {
+        padding-top: 120px;
+    }
+    .latest-info-page {
+        min-height: 100vh;
+    }
+    .launch-info-flex {
+        width: 80%;
+    }
+    .launch-info-container h3 {
+        text-align: center;
+        width: 80%;
+        padding: 60px 0 30px 0;
+    }
+    .category {
         width: 40%;
     }
-    .latest-launch {
-        flex-direction: column;
-        height: auto;
+    .mission-patch {
+        width: 15%; 
     }
-    .latest-launch-info {
+    /*---video-info----------*/
+    .video-info-container {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+    }
+    .launch-video {
+        height: 400px;
         width: 60%;
+    }
+    .video-container {
         margin: 0 auto;
-    }
-    .launch-text {
-        width: 100%;
-        padding-top: 30px;
-        margin: 0;
-    }
-    .latest-launch-video {
-        width: 100%;
+        width: 90%;
     }
     iframe {
-        padding-top: 30px;
-        width: 60%;
-        height: 40vh;
+        width: 90%;
     }
-    .launch-details {
-        padding-top: 30px;
-        width: 60%;
+    .more-info-container {
+        width: 40%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .more-info-container p {
+        max-width: 80%;
+        margin: 0 auto;
+        font-size: 0.8em;
+    }
+    .more-info-container h3 {
+        width: 80%;
         margin: 0 auto;
     }
-    .spacex {
-        flex-direction: column;
-    }
-    .spacex-info {
-        width: 100%;
-    }
-    .spacex-text {  
-        width: 60%;
-        padding-top: 60px;
+
+    /*---upcoming----------*/
+    .upcoming-info {
+        width: 50%;
         margin: 0 auto;
     }
-    .launch-agenda {
-        width: 70%;
-        margin: 0 auto;
+    .launch-schedule {
+        min-height: 100vh;
     }
-    .launch-agenda h1 {
-        margin: 0;
-    }
-
-}
-
-@media screen and (max-width: 420px) {
-.background-image {
-    background-position: bottom;
-}
-.logo-container {
-    position: absolute;
-    width: 40%;
-    left: 30%;
-    right: 50%;
-}
-.logo img {
-    width: 40%;
-}
-.main-nav {
-    display: none;
-}
-
-.burger {
-    padding: 10px;
-    display: block;
-    z-index: 1;
-}
-.burger div {
-    width: 35px;
-    height: 2px;
-    background-color: #1AB1E6;
-    margin: 6px;
-}
-
-.burger-nav {
-    width: 100%;
-    padding-top: 20px; 
-}
-.burger-nav a {
-    text-decoration: none;
-    color: white;  
-}
-.burger-nav ul {
-    padding: 0 20px 0 20px;
-}
-.burger-nav li {
-    list-style-type: none;
-    padding: 10px 0;
-    background-color: black;
-}
-.header-content {
-    padding-top: 20vh;   
-}
-.countdown-container {
-    width: 80%;
-}
 }
