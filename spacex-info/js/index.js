@@ -92,7 +92,6 @@ function nextLaunch(next) {
     
     })
 }
-
 // Latest Launch
 const latestUrl = "https://api.spacexdata.com/v3/launches/latest";
 
@@ -182,7 +181,7 @@ function launchesUpcoming(upcoming) {
                     <div class="upcoming-info">
                         <p class="date">${formattedDate}</p>
                         <p class="name">${upcoming[i].mission_name}</p>
-                        <p class="site">${upcoming[i].launch_site.site_name}</p>
+                        <p class="site">${upcoming[i].launch_site.site_name_long}</p>
                         <p class="arrow">></p>
                     </div>
                 </a>`
@@ -213,7 +212,7 @@ function launchesUpcoming(upcoming) {
                             <div class="upcoming-info">
                                 <p class="date">${formattedDate}</p>
                                 <p class="name">${upcoming[i].mission_name}</p>
-                                <p class="site">${upcoming[i].launch_site.site_name}</p>
+                                <p class="site">${upcoming[i].launch_site.site_name_long}</p>
                                 <p class="arrow">></p>
                             </div>
                         </a>`
@@ -240,7 +239,7 @@ function launchesUpcoming(upcoming) {
                                 <div class="upcoming-info">
                                     <p class="date">${formattedDate}</p>
                                     <p class="name">${upcoming[i].mission_name}</p>
-                                    <p class="site">${upcoming[i].launch_site.site_name}</p>
+                                    <p class="site">${upcoming[i].launch_site.site_name_long}</p>
                                     <p class="arrow">></p>
                                 </div>
                             </a>`
