@@ -457,7 +457,7 @@ iframe {
         max-width: 400px;
     }
     .clock {
-        width: 270px;
+        width: 400px;
     }
     .next-page {
         padding-top: 300px;
@@ -467,27 +467,97 @@ iframe {
     }
 }
 
-@media only screen and (min-width: 800px) {
-    /*---font-sizes----------*/
-
+@media only screen and (min-width: 801px) {
+    /*---fonts----------*/
+    body {
+        font-size: 1.2em;
+    }
+    h1 {
+        font-size: 2.2rem;
+        padding-top: 50px;
+    }
+    .tagline {
+        font-size: 1.6rem;
+        font-weight: 300;
+        padding-top: 5px;
+    }
+    .mission-name {
+        font-size: 1.2rem;
+        padding-bottom: 5px;
+    }
+    .clock-title {
+        font-size: 1.6rem;
+    }
+    .number-flex p {
+        font-size: 2.2rem;
+        margin: 0;
+        line-height: 1.5rem;
+    }
+    .mission-date {
+        font-size: 1.1rem;
+        padding-top: 5px;
+    }
+    .next-page p {
+        font-size: 1.2rem;
+    }
+    h2 {
+        font-size: 2rem;
+        padding-top: 50px;   
+    }
+    .details {
+        font-size: 1.2rem;
+    }
+    .more-info-container p {
+        font-size: 1.2rem;
+        font-weight: 400;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .launch-container p {
+        font-size: 1.2rem;
+    }
+    .launch-video {
+        padding-top: 10px;
+    }
+    .show-more-button {
+        font-size: 1.4rem;
+    }
+    /*---section--------*/
+    header {
+        background: linear-gradient(black, #0B314F, #6e204a);
+    }
+    .upcoming-page {
+        background: linear-gradient(#6e204a, #0B314F);
+    }
+    .launch-schedule {
+        background: linear-gradient(#0B314F, #6e204a);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
     /*---navigation-bar--------*/
+    .navigation-bar {
+        align-items: center;
+    }
+    .main-menu a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        font-size:  1.2rem;
+    }
     .main-menu {
         display: block;
+        margin-right: 5%;
     }
     .main-menu ul {
         list-style-type: none;
         display: flex;
-        margin: 20px 20px;
     }
     .main-menu li {
         padding: 0 10px;
     }
-    .main-menu a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.6em;
-    }
-    a.current-page {
+    .current-page a {
         color: #818C98;
     }
     .main-menu a:hover {
@@ -499,71 +569,75 @@ iframe {
     .burger-button {
         display: none;
     }
-    h1 {
-        padding-top: 15vh;
-        
-    }
+    
     /*---countdown--------*/
+   
     .countdown-container {
         padding-top: 10vh;
+        max-width: 450px;
     }
-    .tagline {
-        padding-top: 5px;
+    .clock {
+        width: 300px;
     }
     /*---next-page--------*/
     .next-page {
-        padding-top: 100px;
+        position: absolute;
+        padding: 0;
     }
     .next-page img {
         width: 3%;
+        padding: 0px 0;
     }
     /*---latest-launch---------*/
-    h2 {
-        padding-top: 120px;
-    }
     .launch-info-flex {
-        width: 80%;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .mission-patch {
+        width: 50%; 
+    }
+    .mission-patch img {
+        width: 30%; 
+        margin: 0;
     }
     .launch-info-container h3 {
         text-align: center;
         width: 80%;
-        padding: 60px 0 30px 0;
+        padding: 20px 0;   
+    }
+    .details {
+        justify-content: center;
     }
     .category {
-        width: 40%;
+        min-width: 30%;
     }
-    .mission-patch {
-        width: 15%; 
+    .info {
+        width: 30%;
     }
     /*---video-info----------*/
     .video-info-container {
         display: flex;
-        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 20px;
     }
     .launch-video {
-        height: 400px;
-        width: 60%;
-    }
-    .video-container {
-        margin: 0 auto;
-        width: 90%;
+        height: 50vh;
+        width: 50%;
     }
     iframe {
-        width: 90%;
+        width: 95%;
+        height: 40vh;
     }
     .more-info-container {
-        width: 40%;
+        width: 50%;
         margin: 0 auto;
         padding: 0;
     }
-    .more-info-container p {
-        max-width: 80%;
-        margin: 0 auto;
-        font-size: 0.8em;
-    }
     .more-info-container h3 {
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
+        font-size: 1.4rem;
     }
     /*---upcoming----------*/
     .upcoming-info {
@@ -578,5 +652,9 @@ iframe {
     }
     .upcoming-info .name {
         width: 30%;
+    }
+    .launch-agenda {
+        margin: 0;
+        width: 100%;
     }
 }
