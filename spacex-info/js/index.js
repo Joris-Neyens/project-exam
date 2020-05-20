@@ -37,7 +37,10 @@ let scrollPosition = window.pageYOffset;
         }
     scrollPosition = currentPosition;
 }
-
+// burgerbutton pointer
+burgerButton.addEventListener("mouseover", function () {
+    burgerButton.style.cursor = "pointer";
+});
 
 //Countdown
 const nextUrl = "https://api.spacexdata.com/v3/launches/next";
@@ -256,8 +259,4 @@ showMore.addEventListener("mouseover", function () {
 });
 showMore.addEventListener("mouseout", function() {
     showMore.style.background = "linear-gradient(90deg, #098CF6, #1AB1E6)";
-});
-const button = document.querySelector(".button");  
-button.addEventListener("mouseover", function () {
-        button.style.cursor = "pointer";
 });
