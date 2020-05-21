@@ -37,6 +37,20 @@ let scrollPosition = window.pageYOffset;
         }
     scrollPosition = currentPosition;
 }
+// main-menu on scroll
+const mainMenu = document.querySelector(".main-menu");
+    let newScrollPosition = window.pageYOffset;
+    window.addEventListener("scroll", mainScrollEvent);
+
+    function mainScrollEvent() {
+        const currentPosition = window.pageYOffset;
+        if(newScrollPosition > currentPosition) {
+            mainMenu.style.top = "10px";
+        } else {
+            mainMenu.style.top = "-70px";
+        }
+    newScrollPosition = currentPosition;
+}
 // burgerbutton pointer
 burgerButton.addEventListener("mouseover", function () {
     burgerButton.style.cursor = "pointer";

@@ -37,6 +37,20 @@ let scrollPosition = window.pageYOffset;
         }
     scrollPosition = currentPosition;
 }
+// main-menu on scroll
+const mainMenu = document.querySelector(".main-menu");
+    let newScrollPosition = window.pageYOffset;
+    window.addEventListener("scroll", mainScrollEvent);
+
+    function mainScrollEvent() {
+        const currentPosition = window.pageYOffset;
+        if(newScrollPosition > currentPosition) {
+            mainMenu.style.top = "10px";
+        } else {
+            mainMenu.style.top = "-70px";
+        }
+    newScrollPosition = currentPosition;
+}
 //hamburger pointer
 burgerButton.addEventListener("mouseover", function () {
     burgerButton.style.cursor = "pointer";
@@ -153,11 +167,9 @@ function history(events) {
     let html = ""
     
     events.forEach (function(event) {
-
         let flightNumber = ""
         if (event.flight_number) {
             flightNumber = `<a href="flight.html?id=${event.flight_number}">Flight Details</a>`
-            
         }
 
         let eventDate = new Date(event.event_date_utc)
@@ -179,9 +191,11 @@ function history(events) {
                         </div>
                     </div>`
 
+        
+                  
+                    
     })
     
 historicEvent.innerHTML = html;
 
 }
-

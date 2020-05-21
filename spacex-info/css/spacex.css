@@ -294,7 +294,6 @@ p.headquarters {
     align-items: center;
     width: 90%;
     margin: 0 auto;
-    scroll-snap-align: start;
 }
 .event-container p {
     line-height: 1.7rem;
@@ -458,6 +457,9 @@ p.headquarters {
     .main-menu {
         display: block;
         margin-right: 5%;
+        position: fixed;
+        right: 0;
+        transition: 0.2s
     }
     .main-menu ul {
         list-style-type: none;
@@ -466,7 +468,7 @@ p.headquarters {
     .main-menu li {
         padding: 0 10px;
     }
-    a.current-page {
+    .current-page a {
         color: #818C98;
     }
     .main-menu a:hover {
@@ -499,7 +501,11 @@ p.headquarters {
     }
     /*---------space-x---------*/
     .spacex-info {
-        
+        width: 100%;
+    }
+    .historic-event {
+        width: 100%;
+        margin: 0;
     }
     .spacex-info-container {
         height: 70vh;
@@ -529,20 +535,41 @@ p.headquarters {
         width: 3%; 
     }
     /*---------timeline---------*/
+    .event-container {
+        width: 100%;
+        min-height: 100vh;
+    }
     .timeline-flex {
         display: flex;
-        flex-direction: row-reverse;
-    }
-    .timeline-details {
-        width: 50%;
+        flex-direction: column-reverse;
+        width: 80%;
     }
     .timeline-details p {
-        width: 80%;
+        width: 70%;
         margin: 0 auto;
+        padding: 20px 40px;
+        
+    }
+    .timeline-details p:hover {
+        background: white;
+        color: rgb(26, 26, 26);
+        border-radius: 5px;
     }
     .history-link-container {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
+        justify-content: center;
+    }
+    .history-link-container a {
+        width: 200px;
+        margin: 20px;
+    }
+    .back-up {
+        transform: rotate(180deg);
+        display: block;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+    img.back-up {
+        width: 5%;
+        
     }
 }
