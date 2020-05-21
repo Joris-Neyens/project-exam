@@ -3,25 +3,59 @@
 const burgerButton = document.querySelector(".burger-button")
 const burgerLine = document.querySelectorAll(".burger-line");
 const burgerMenu = document.querySelector(".burger-menu");
+const h1 = document.querySelector("h1")
+const countdownContainer = document.querySelector(".countdown-container")
 
 let toggle = 0;
+
+burgerButton.onmouseover = function() {
+    burgerButton.style= "cursor: pointer;"
+}
 
 burgerButton.onclick = function() {
 
     if(toggle == 0) {
         burgerMenu.style.display = "block"
-        burgerLine.forEach(function(color) {
-            color.style.backgroundColor = "#1AB1E6"
-        })
         toggle = 1;
     } else if (toggle == 1){
         burgerMenu.style.display = "none"
-        burgerLine.forEach(function(color) {
-            color.style.backgroundColor = "white"
-        })
         toggle = 0;
     }; 
 }
+// hamburger dissapear on scroll
+
+let scrollPosition = window.pageYOffset;
+    window.addEventListener("scroll", scrollEvent);
+
+    function scrollEvent() {
+        const currentPosition = window.pageYOffset;
+        if(scrollPosition > currentPosition) {
+            burgerButton.style.top = "0";
+        } else {
+            burgerButton.style.top = "-70px";
+            burgerMenu.style.display = "none";
+        }
+    scrollPosition = currentPosition;
+}
+// main-menu on scroll
+const mainMenu = document.querySelector(".main-menu");
+    let newScrollPosition = window.pageYOffset;
+    window.addEventListener("scroll", mainScrollEvent);
+
+    function mainScrollEvent() {
+        const currentPosition = window.pageYOffset;
+        if(newScrollPosition > currentPosition) {
+            mainMenu.style.top = "10px";
+        } else {
+            mainMenu.style.top = "-70px";
+        }
+    newScrollPosition = currentPosition;
+}
+//hamburger pointer
+burgerButton.addEventListener("mouseover", function () {
+    burgerButton.style.cursor = "pointer";
+});
+
 // site info
 
 const siteInfoUrl = "https://api.spacexdata.com/v3";
@@ -50,10 +84,7 @@ function website(info) {
                             
 }
 // form validation
-
-
-const email = document.querySelector("#email");
-
+const nameError = document.querySelector(".name-error")
 const emailError = document.querySelector(".email-error");
 const commentsError = document.querySelector(".comments-error")
 
@@ -67,9 +98,9 @@ function validateAfterEmail() {
     const nameValue = name.value; 
 
     if(inputLength(nameValue) === true) {
-        name.placeholder = "name";
+        nameError.style.display = "none";
     }   else {
-        name.placeholder = "Please enter your name";
+        nameError.style.display = "block";
     }
 }
 
@@ -80,9 +111,9 @@ function validateAfterComments() {
     const nameValue = name.value; 
 
     if(inputLength(nameValue) === true) {
-        name.placeholder = "name";
+        nameError.style.display = "none";
     }   else {
-        name.placeholder = "Please enter your name";
+        nameError.style.display = "block";
     }
 
     const emailValue = email.value;
@@ -93,14 +124,10 @@ function validateAfterComments() {
     }
     
     if(inputLength(emailValue) === true) {
-        email.placeholder = "email";
-    }   else {
-        email.placeholder = "please enter email";
         emailError.style.display = "none";
+    }   else {
+        emailError.style.display = "block";
     }
-
-    
-
 }
 
 // after submit
@@ -114,9 +141,9 @@ function submitValidate(event) {
     const nameValue = name.value; 
 
     if(inputLength(nameValue) === true) {
-        name.placeholder = "name";
+        nameError.style.display = "none";
     }   else {
-        name.placeholder = "Please enter your name";
+        nameError.style.display = "block";
     }
 
     const emailValue = email.value;
@@ -127,10 +154,9 @@ function submitValidate(event) {
     }
     
     if(inputLength(emailValue) === true) {
-        email.placeholder = "email";
-    }   else {
-        email.placeholder = "please enter email";
         emailError.style.display = "none";
+    }   else {
+        emailError.style.display = "block";
     }  
 
     const comments = document.querySelector("#comments")

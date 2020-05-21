@@ -36,7 +36,7 @@
                     <li><a href="index.html" alt="link to homepage">Home</a></li>
                     <li><a href="spacex.html" alt="link to spacex page">SpaceX</a></li>
                     <li><a href="vehicles.html" alt="link to vehicles page">Vehicles</a></li>
-                    <li><a href="contact.html" alt="link to contact page">Contact</a></li>
+                    <li class="current-page"><a href="contact.html" alt="link to contact page">Contact</a></li>
                 </ul>  
             </div>
             <h1>Contact</h1>
@@ -52,21 +52,21 @@
                     </p>
                     <form>
                         <div class="form-element">
-                            <label for="name">
-                                <input id="name" type="text" name ="name" placeholder="Name"/>
-                            </label>
+                            <label for="name">Name:</label>
+                            <input id="name" type="text" name ="name"/>  
+                            <p class="name-error" style="display: none">Please enter a name</p>
                         </div>
                         <div class="form-element">
-                            <label for="email">
-                                <input id="email" type="text" name="email" placeholder="Email"/>
-                            </label>
+                            <label for="email">Email:</label>
+                            <input id="email" type="text" name="email"/>
                             <p class="email-error" style="display: none">Please enter a valid email address</p>
                         </div>
                         <div class="form-element">
-                            <label for="comments">
-                                <textarea id="comments" rows="4" cols="40" placeholder="Comments"></textarea>
-                            </label>
-                            <p class="comments-error" style="display: none">Please enter at least 5 characters</p>
+                            <label for="comments">Comments</label>
+                            <div class="comment-flex">
+                                <textarea id="comments" rows="4" cols="40"></textarea>
+                                <p class="comments-error" style="display: none">Please enter a message</p>
+                            </div>
                         </div>
                         <div class="form-element">
                             <label for="submit">

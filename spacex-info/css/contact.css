@@ -4,34 +4,29 @@
 
 body {
     margin: 0;
-    font-family: ubuntu,sans-serif;
+    font-family: brandon-grotesque, sans-serif;
     font-weight: 400;
-    font-size: 0.7em;
     font-style: normal;
-    color: white;
-    min-height: 100vh;
+    font-style: normal;
+    color: #E3E3E3;
     background: linear-gradient(black, #0B314F, #842759);
-    height: 100%;
+    min-height: 100vh;
     background-repeat: no-repeat;
+    position: relative;
+    
 }
-h1 {
-    padding-top: 20vh;
-    text-align: center;
-    font-weight: 300;
-    font-size: 1.6em;
-}
-header {    
-    width: 100%;
+header {
     position: relative;
 }
+p {
+    font-size: 1rem;
+    line-height: 1.7em;
+}
 .logo {
-    width: 50%;
+    width: 45%;
     display: flex;
     padding: 10px;
     align-items: center;
-}
-a {
-    text-decoration: none;
 }
 .logo img {
     display: block;
@@ -40,36 +35,47 @@ a {
 }
 .logo-name {
     color: white;
-    font-weight: 400;
-    font-size: 1.6em;
-    margin: 0;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin: 0 0 0 5px;
+    line-height: 1.4rem;
 }
-/*--------menu-----------*/
+h1 {
+    width: 90%;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 1.4rem;
+    padding-top: 5vh;
+    text-align: center;
+    text-transform: uppercase;
+}
+/*-------main-menu-----------*/
 .navigation-bar {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
+.main-menu {
+    display: none;
+}
 .burger-button {
-    padding: 15px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     background: black;
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 2;
+    transition: top 0.2s;
 }
 .burger-line {
     width: 35px;
     height: 2px;
-    background-color: white;
+    background-color: #E3E3E3;
     margin: 5px 0;
 }
-.main-menu {
-    display: none;
-}
 .burger-menu {
-    z-index: 1;
     position: relative;
 }
 .burger-menu ul {
@@ -79,8 +85,9 @@ a {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    font-size: 1.8em;
-    font-weight: 300;
+    font-size: 1.8rem;
+    font-weight: 400;
+    z-index: 2;
 }
 .burger-menu li {
     background: rgba(0,0,0,0.2);
@@ -89,11 +96,72 @@ a {
 }
 .burger-menu a {
     text-decoration: none;
-    color: white;
+    color: #E3E3E3;
 }
-
-
-
+.burger-menu a:active {
+    text-decoration: none;
+    color: #098CF6;
+}
+.current-page a  {
+    color: #818C98;
+}
+/*-------section-----------*/
+section {
+    width: 90%;
+    margin: 0 auto;
+}
+section a {
+    background: linear-gradient(90deg, #098CF6, #1AB1E6);
+    padding: 2px 10px;
+    border-radius: 5px; 
+    text-align: center;
+    text-decoration: none;
+    color: white
+}
+h2 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding-top: 20px;
+    text-transform: uppercase;
+}
+.contact-form {
+    margin-top: 30px;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 30px;
+}
+.contact-form p {
+    margin: 0;
+    line-height: 1.2em;
+}
+.form-element {
+    display: flex;
+}
+.comment-flex {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    width: 20%;
+}
+input {
+    width: 40%;
+    margin-bottom: 10px;
+}
+textarea {
+    width: 70%;
+}
+button {
+    background: linear-gradient(90deg, #098CF6, #1AB1E6);
+    padding: 2px 10px;
+    border-radius: 5px; 
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border: none;
+    width: 100px;
+}
 
 
 @media only screen and (min-width: 800px) {
