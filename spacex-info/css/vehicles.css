@@ -213,6 +213,7 @@ h1 {
     margin: 0 auto;
     text-align: center;
     padding-bottom: 10px;
+    text-transform: uppercase;
 }
 .collaps-arrow {
     transform: rotate(180deg);
@@ -229,9 +230,6 @@ h1 {
 }
 .hide-image {
     text-align: center; 
-}
-.hide-image p {
-    margin: 0;
 }
 /*--------dragons-----------*/
 .dragons {
@@ -263,8 +261,9 @@ h1 {
 }
 .show-dragon-images p {
     width: 70%;
-    margin: 0;
-    padding-bottom: 10px;    
+    padding-bottom: 10px;   
+    margin: 0 auto;
+    text-transform: uppercase; 
 }
 .detail-dragon-images {
     display: flex;
@@ -292,10 +291,6 @@ h1 {
     display: block;
     margin: 0 auto;
     width: 10%;
-}
-.show-dragon-images p {
-    width: 70%;
-    margin: 0 auto;
 }
 .dragon-arrow {
     width: 50%;

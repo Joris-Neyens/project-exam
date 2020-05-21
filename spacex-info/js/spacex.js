@@ -3,25 +3,45 @@
 const burgerButton = document.querySelector(".burger-button")
 const burgerLine = document.querySelectorAll(".burger-line");
 const burgerMenu = document.querySelector(".burger-menu");
+const h1 = document.querySelector("h1")
+const countdownContainer = document.querySelector(".countdown-container")
 
 let toggle = 0;
+
+burgerButton.onmouseover = function() {
+    burgerButton.style= "cursor: pointer;"
+}
 
 burgerButton.onclick = function() {
 
     if(toggle == 0) {
         burgerMenu.style.display = "block"
-        burgerLine.forEach(function(color) {
-            color.style.backgroundColor = "#1AB1E6"
-        })
         toggle = 1;
     } else if (toggle == 1){
         burgerMenu.style.display = "none"
-        burgerLine.forEach(function(color) {
-            color.style.backgroundColor = "white"
-        })
         toggle = 0;
     }; 
 }
+// hamburger dissapear on scroll
+
+let scrollPosition = window.pageYOffset;
+    window.addEventListener("scroll", scrollEvent);
+
+    function scrollEvent() {
+        const currentPosition = window.pageYOffset;
+        if(scrollPosition > currentPosition) {
+            burgerButton.style.top = "0";
+        } else {
+            burgerButton.style.top = "-70px";
+            burgerMenu.style.display = "none";
+        }
+    scrollPosition = currentPosition;
+}
+//hamburger pointer
+burgerButton.addEventListener("mouseover", function () {
+    burgerButton.style.cursor = "pointer";
+});
+
 //location-employees
 const infoUrl = "https://api.spacexdata.com/v3/info";
 async function getInfo() {
@@ -139,7 +159,6 @@ function history(events) {
             flightNumber = `<a href="flight.html?id=${event.flight_number}">Flight Details</a>`
             
         }
-        console.log(flightNumber)
 
         let eventDate = new Date(event.event_date_utc)
         let formattedDate = eventDate.getFullYear();
@@ -149,12 +168,15 @@ function history(events) {
                             <h2>${formattedDate}</h2>
                         </div>
                         <h3>${event.title}</h3>
-                        <p>${event.details}</p>
-                        <div class="history-link-container">
-                            ${flightNumber}
-                            <a href="${event.links.article}">Article</a>
+                        <div class="timeline-flex">
+                            <div class="timeline-details">
+                                <p>${event.details}</p>
+                            </div>
+                            <div class="history-link-container">
+                                ${flightNumber}
+                                <a href="${event.links.article}">Article</a>
+                            </div>
                         </div>
-                        <div class="images"></div>
                     </div>`
 
     })
@@ -162,5 +184,4 @@ function history(events) {
 historicEvent.innerHTML = html;
 
 }
-
 
