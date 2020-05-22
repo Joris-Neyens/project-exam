@@ -4,10 +4,8 @@
 
 body {
     margin: 0;
-    font-family: brandon-grotesque, sans-serif;
+    font-family: open-sans, sans-serif;
     font-weight: 400;
-    font-style: normal;
-    font-size: 0.8em;
     font-style: normal;
     color: #E3E3E3;
     background: linear-gradient(black, #0B314F, #842759);
@@ -18,6 +16,7 @@ header {
     min-height: 100vh;
 }
 .logo {
+    font-family: brandon-grotesque, sans-serif;
     width: 45%;
     display: flex;
     padding: 10px;
@@ -45,6 +44,7 @@ a {
     justify-content: space-between;
 }
 .main-menu {
+    font-family: brandon-grotesque, sans-serif;
     display: none;
     position: fixed;
     right: 0;
@@ -100,6 +100,7 @@ a {
 }
 /*--------countdown-----------*/
 .countdown-container {
+    font-family: brandon-grotesque, sans-serif;
     padding-top: 10vh;
     width: 70%;
     max-width: 300px;
@@ -167,6 +168,7 @@ a {
 }
 /*--------title-----------*/
 h1 {
+    font-family: brandon-grotesque, sans-serif;
     width: 90%;
     margin: 0 auto;
     font-weight: 700;
@@ -194,6 +196,7 @@ h1 {
     color: #E3E3E3;
 }
 .next-page p {
+    font-family: brandon-grotesque, sans-serif;
     margin: 5px 0;
     font-size: 1rem;
     font-weight: 500;
@@ -203,6 +206,7 @@ h1 {
 }
 /*--------Latest-Launch----------*/
 h2 {
+    font-family: brandon-grotesque, sans-serif;
     margin: 0;
     font-weight: 700;
     font-size: 1.4rem;
@@ -211,17 +215,19 @@ h2 {
     text-transform: uppercase;
 }
 h3 {
+    font-family: brandon-grotesque, sans-serif;
     width: 90%;
     font-weight: 500;
     font-size: 1.2rem;
     padding: 30px 0 10px 0;
     margin: 0 auto;
+    text-align: center;
     text-transform: uppercase;
 }
 .details {
     display: flex;
     margin: 0 auto;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 .category {
     width: 50%;
@@ -268,10 +274,8 @@ iframe {
     margin: 0 auto;
 }
 .more-info-container p  {
-    line-height: 1.7;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: rgb(214, 221, 230);
-    max-width: 500px;
 }
 .more-info-container h3 {
     margin: 0;
@@ -282,6 +286,7 @@ iframe {
     display: flex;
     align-items: center;
     padding: 0 5%;
+    font-size: 0.8rem;
 }
 .upcoming-info .date {
     width: 25%;
@@ -294,7 +299,7 @@ iframe {
 }
 .arrow {
     padding-left: 10px;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 .arrow p {
     width: 5%;
@@ -337,7 +342,7 @@ iframe {
     border-radius: 5px; 
     text-decoration: none;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.8rem;
     width: 200px;
     margin: 0 auto;
 }
@@ -349,14 +354,12 @@ iframe {
 
 @media only screen and (min-width: 414px) {
     /*----font-sizes----*/
-    body {
-        font-size: 0.9em;
-    }
+
     h1 {
         font-size: 1.6rem;
     }
     .tagline {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     .mission-name {
         font-size: 1.2rem;
@@ -377,20 +380,21 @@ iframe {
         font-size: 1.6rem;
     }
     h3 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     .details {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     .more-info-container p {
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 400;
+        line-height: 1.6em;
     }
     .launch-container p {
-        font-size: 1.2rem;
+        font-size: 0.8rem;
     }
     .show-more-button {
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
     /*-------*/
     .logo {
@@ -412,16 +416,14 @@ iframe {
         width: 70%;
     }
     .launch-video {
-        margin-top: 0vh;
+        margin-top: 0;
+        height: 250px;
     }
     .more-info-container {
         padding-top: 40px;
     }
-    .launch-video {
-        height: 40vh;
-    }
     iframe {
-        height: 35vh;
+        height: 200px;
     }
 }
 @media only screen and (min-width: 600px) {
@@ -430,7 +432,7 @@ iframe {
         font-size: 1.2em;
     }
     .tagline {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     .logo p {
         font-size: 1.8rem;
@@ -440,13 +442,15 @@ iframe {
         font-size: 1.8rem;
     }
     h3 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
     .next-page p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     .more-info-container p {
-        font-size: 1.4rem;
+        font-size: 1rem;
+        margin: 0 auto;
+        width: 80%;
     }
 
     /*--------*/
@@ -465,6 +469,16 @@ iframe {
     .next-page {
         padding-top: 300px;
     }
+    .launch-info-flex {
+        width: 70%;
+        padding-top: 20px;
+    }
+    .launch-video {
+        height: 350px;
+    }
+    iframe {
+        height: 270px;
+    }
     .launch-agenda {
         margin: 80px 0;
     }
@@ -478,6 +492,15 @@ iframe {
     h1 {
         font-size: 2.2rem;
         padding-top: 50px;
+    }
+    .more-info-container h3 {
+        width: 90%;
+        text-align: left;
+        padding: 5px 0 20px 0;
+        width: 80%;
+        margin: 0 auto;
+        font-size: 1.6rem;
+        }
     }
     .tagline {
         font-size: 1.6rem;
@@ -622,25 +645,23 @@ iframe {
         display: flex;
         width: 80%;
         margin: 0 auto;
-        padding-top: 20px;
+        padding-top: 60px;
     }
     .launch-video {
         height: 50vh;
         width: 50%;
     }
     iframe {
-        width: 95%;
-        height: 40vh;
+        width: 90%;
+        height: 300px;
     }
     .more-info-container {
         width: 50%;
         margin: 0 auto;
         padding: 0;
     }
-    .more-info-container h3 {
-        width: 90%;
-        margin: 0 auto;
-        font-size: 1.4rem;
+    .more-info-container p {
+        width: 80%;
     }
     /*---upcoming----------*/
     .upcoming-info {
