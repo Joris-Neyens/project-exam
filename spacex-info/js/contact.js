@@ -117,13 +117,7 @@ function validateAfterComments() {
     }
 
     const emailValue = email.value;
-    if(emailInput(emailValue) === true ) {
-        emailError.style.display = "none";
-    }   else {
-        emailError.style.display = "block";
-    }
-    
-    if(inputLength(emailValue) === true) {
+    if(emailInput(emailValue) === true) {
         emailError.style.display = "none";
     }   else {
         emailError.style.display = "block";
@@ -147,17 +141,12 @@ function submitValidate(event) {
     }
 
     const emailValue = email.value;
-    if(emailInput(emailValue) === true ) {
+    if(emailInput(emailValue) === true && inputLength(emailValue) == true ) {
         emailError.style.display = "none";
     }   else {
         emailError.style.display = "block";
     }
-    
-    if(inputLength(emailValue) === true) {
-        emailError.style.display = "none";
-    }   else {
-        emailError.style.display = "block";
-    }  
+
 
     const comments = document.querySelector("#comments")
     const commentsValue = comments.value;
@@ -169,7 +158,7 @@ function submitValidate(event) {
 
     const sendConfirmation = document.querySelector(".send-confirmation");
 
-    if(inputLength(nameValue) === true && emailInput(emailValue) === true  && inputLength(emailValue) === true && commentsInput(commentsValue) === true) {
+    if(inputLength(nameValue) === true && emailInput(emailValue) === true  && commentsInput(commentsValue) === true) {
         sendConfirmation.style.display = "block";
     } else {
         sendConfirmation.style.display = "none";

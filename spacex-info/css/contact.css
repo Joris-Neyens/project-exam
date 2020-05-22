@@ -4,23 +4,23 @@
 
 body {
     margin: 0;
-    font-family: brandon-grotesque, sans-serif;
+    font-family: open-sans, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-style: normal;
     color: #E3E3E3;
-    background: linear-gradient(black, #0B314F, #842759);
-    min-height: 100vh;
-    background-repeat: no-repeat;
     position: relative;
-    
+    min-height: 100vh;
+    color:rgb(26, 26, 26);
 }
 header {
     position: relative;
 }
 p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1.7em;
+}
+a {
+    text-decoration: none;
 }
 .logo {
     width: 45%;
@@ -36,14 +36,18 @@ p {
 .logo-name {
     color: white;
     font-weight: 500;
+    font-family: brandon-grotesque, sans-serif;
+    font-style: normal;
     font-size: 1.4rem;
     margin: 0 0 0 5px;
     line-height: 1.4rem;
 }
 h1 {
+    font-family: brandon-grotesque, sans-serif;
+    font-style: normal;
+    font-weight: 700;
     width: 90%;
     margin: 0 auto;
-    font-weight: 700;
     font-size: 1.4rem;
     padding-top: 5vh;
     text-align: center;
@@ -54,12 +58,13 @@ h1 {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    background: black;
 }
 .main-menu {
     display: none;
 }
 .burger-button {
-    padding: 16px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     background: black;
@@ -90,7 +95,7 @@ h1 {
     z-index: 2;
 }
 .burger-menu li {
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.8);
     padding: 20px 20px 10px 0;
     text-align: right;
 }
@@ -109,6 +114,7 @@ h1 {
 section {
     width: 90%;
     margin: 0 auto;
+    min-height: 50vh;
 }
 section a {
     background: linear-gradient(90deg, #098CF6, #1AB1E6);
@@ -116,24 +122,35 @@ section a {
     border-radius: 5px; 
     text-align: center;
     text-decoration: none;
+    font-size: 0.8rem;
     color: white
+}
+section a:hover {
+    background: #C44489;
 }
 h2 {
     margin: 0;
+    font-family: brandon-grotesque, sans-serif;
+    font-style: normal;
     font-weight: 500;
     font-size: 1.2rem;
     padding-top: 20px;
     text-transform: uppercase;
 }
+section.form {
+    background: white;  
+    min-height: 50vh;
+}
 .contact-form {
-    margin-top: 30px;
+    width: 90%;
+    margin: 30 auto 0;  
     position: absolute;
     bottom: 0;
     padding-bottom: 30px;
 }
 .contact-form p {
     margin: 0;
-    line-height: 1.2em;
+    padding-bottom: 10px;
 }
 .form-element {
     display: flex;
@@ -143,25 +160,74 @@ h2 {
     flex-direction: column;
 }
 label {
-    width: 20%;
+    padding-right: 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: 25%;
+}
+.submit-form-element  {
+    width: 200px;
+    margin: 0 auto;
 }
 input {
-    width: 40%;
+    font-size: 0.8rem;
+    font-family: open-sans, sans-serif;
+    border-style: none;
+    border-radius: 5px;
+    width: 100%;
+    background: rgb(235, 235, 235);
+    padding: 5px;
     margin-bottom: 10px;
 }
+input:focus {
+    background: rgb(206, 206, 206);
+}
 textarea {
-    width: 70%;
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: open-sans, sans-serif;
+    font-size: 0.8rem;
+    font-style: normal;
+    background: rgb(235, 235, 235);
+    border-style: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+textarea:focus {
+    background: rgb(206, 206, 206);
+    border-style: none;
 }
 button {
     background: linear-gradient(90deg, #098CF6, #1AB1E6);
-    padding: 2px 10px;
+    padding: 0.2em;
     border-radius: 5px; 
     text-align: center;
-    text-decoration: none;
-    color: white;
     border: none;
-    width: 100px;
+    font-weight: 400;
+    font-size: 1rem;
+    width: 200px;
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #E3E3E3;
+    
 }
+.error-flex {
+    width: 100%;
+}
+.name-error, .email-error, .comments-error {
+    padding: none;
+    color: #098CF6;
+}
+.send-confirmation {
+    color: #098CF6;
+    text-align: center;
+}
+button:hover {
+    background: #C44489;
+    cursor: pointer;
+}
+
 
 
 @media only screen and (min-width: 800px) {
