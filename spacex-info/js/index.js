@@ -32,7 +32,7 @@ let scrollPosition = window.pageYOffset;
         if(scrollPosition > currentPosition) {
             burgerButton.style.top = "0";
         } else {
-            burgerButton.style.top = "-70px";
+            burgerButton.style.top = "-100px";
             burgerMenu.style.display = "none";
         }
     scrollPosition = currentPosition;

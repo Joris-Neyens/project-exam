@@ -11,7 +11,7 @@
     <body> 
         <header>
             <div class="navigation-bar">
-                <a class="logo-link" href="home.html" alt="link to homepage">
+                <a class="logo-link" href="index.html" alt="link to homepage">
                     <div class="logo">
                         <img src="images/logo-black-white.png" title="SpaceX Info Logo" alt="SpaceX Info logo rocket">
                         <p class="logo-name">SpaceX Info</p>
@@ -41,52 +41,54 @@
             </div>
             <h1>Contact</h1>
         </header>
-        <section>
-            <div class="site-info">
-                <div class="site-info-container"></div>
-            </div>
-        </section>
-        <section class="form">
-            <div class="contact-form">
-                <div>
-                    <p>If you would like to contact the maker of this website, please
-                        use the contact form below.
-                    </p>
-                    <form>
-                        <div class="form-element">
-                            <label for="name">Name:</label>
-                            <div class="error-flex">
-                                <input id="name" type="text" name ="name"/>  
-                                <p class="name-error" style="display: none">Please enter a name</p>
+        <div class="section-flex">
+            <section>
+                <div class="site-info">
+                    <div class="site-info-container"></div>
+                </div>
+            </section>
+            <section class="form">
+                <div class="contact-form">
+                    <div>
+                        <p>If you would like to contact the maker of this website, please
+                            use the contact form below.
+                        </p>
+                        <form>
+                            <div class="form-element">
+                                <label for="name">Name:</label>
+                                <div class="error-flex">
+                                    <input id="name" type="text" name ="name"/>  
+                                    <p class="name-error" style="display: none">Please enter a name</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-element">
-                            <label for="email">Email:</label>
-                            <div class="error-flex">
-                                <input id="email" type="text" name="email"/>
-                                <p class="email-error" style="display: none">Please enter a valid email address</p>
+                            <div class="form-element">
+                                <label for="email">Email:</label>
+                                <div class="error-flex">
+                                    <input id="email" type="text" name="email"/>
+                                    <p class="email-error" style="display: none">Please enter a valid email address</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="comments-form-element">
-                            <label for="comments">Comments: </label>
-                            <div class="comment-flex">
-                                <textarea id="comments" rows="4" cols="40"></textarea>
-                                <p class="comments-error" style="display: none">Please enter a message</p>
+                            <div class="comments-form-element">
+                                <label for="comments">Comments: </label>
+                                <div class="comment-flex">
+                                    <textarea id="comments" rows="4" cols="40"></textarea>
+                                    <p class="comments-error" style="display: none">Please enter a message</p>
+                                </div>
                             </div>
+                            <div class="submit-form-element">
+                                <label for="submit">
+                                    <button id="submit" type="submit">Submit</button>
+                                </label>
+                            </div>
+                        </form>
+                        <div class="send-confirmation" style="display: none">
+                            <p>Thank you for your message, we will get back to you asap</p>
                         </div>
-                        <div class="submit-form-element">
-                            <label for="submit">
-                                <button id="submit" type="submit">Submit</button>
-                            </label>
-                        </div>
-                    </form>
-                    <div class="send-confirmation" style="display: none">
-                        <p>Thank you for your message, we will get back to you asap</p>
                     </div>
                 </div>
-            </div>
-        </section>
-            <script src="js/contact.js"></script>
+            </section>
+        </div>
+        <script src="js/contact.js"></script>
         </body>
     </html> 
     

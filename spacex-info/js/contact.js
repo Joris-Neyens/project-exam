@@ -3,7 +3,6 @@
 const burgerButton = document.querySelector(".burger-button")
 const burgerLine = document.querySelectorAll(".burger-line");
 const burgerMenu = document.querySelector(".burger-menu");
-const h1 = document.querySelector("h1")
 const countdownContainer = document.querySelector(".countdown-container")
 
 let toggle = 0;
@@ -37,20 +36,6 @@ let scrollPosition = window.pageYOffset;
         }
     scrollPosition = currentPosition;
 }
-// main-menu on scroll
-const mainMenu = document.querySelector(".main-menu");
-    let newScrollPosition = window.pageYOffset;
-    window.addEventListener("scroll", mainScrollEvent);
-
-    function mainScrollEvent() {
-        const currentPosition = window.pageYOffset;
-        if(newScrollPosition > currentPosition) {
-            mainMenu.style.top = "10px";
-        } else {
-            mainMenu.style.top = "-70px";
-        }
-    newScrollPosition = currentPosition;
-}
 //hamburger pointer
 burgerButton.addEventListener("mouseover", function () {
     burgerButton.style.cursor = "pointer";
@@ -80,7 +65,7 @@ function website(info) {
     siteInfo.innerHTML = `<h2>About this website</h2>
                             <p>This website is build using the ${info.project_name}, an ${info.description}.
                             </p>
-                            <a href ="${info.project_link}" alt="link to spacex API">${info.project_name}</a>`
+                            <a href ="${info.project_link}" alt="link to spacex API">Spacex API</a>`
                             
 }
 // form validation
@@ -165,28 +150,28 @@ function submitValidate(event) {
     }
 
 }
-    function inputLength(value) {
-        if (value.length > 0) {
-            return true;
-        } else {
-            return false;
-        }
+
+function inputLength(value) {
+    if (value.length > 0) {
+        return true;
+    } else {
+        return false;
     }
+}
 
-    function emailInput(email) {
-        const regEx = /\S+@\S+\.\S+/;
-        return regEx.test(email);
+function emailInput(email) {
+    const regEx = /\S+@\S+\.\S+/;
+    return regEx.test(email);
+}
+
+function commentsInput(comments) {
+    const trimmedComments = comments.trim();
+    
+    if(trimmedComments.length >= 5) {
+        return true;
+    } else {
+        return false;
     }
-
-    function commentsInput(comments) {
-        const trimmedComments = comments.trim();
-
-        if(trimmedComments.length >= 5) {
-            return true;
-        } else {
-            return false;
-        }
-
-    }
+}
 
     

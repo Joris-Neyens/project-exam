@@ -129,18 +129,18 @@ p.headquarters {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    font-size: 1.8rem;
-    font-weight: 400;
-    z-index: 2;
+    z-index: 2; 
 }
 .burger-menu li {
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.8);
     padding: 20px 20px 10px 0;
     text-align: right;
 }
 .burger-menu a {
     text-decoration: none;
     color: #E3E3E3;
+    font-size: 1.8rem;
+    font-weight: 400;
 }
 .burger-menu a:active {
     text-decoration: none;
@@ -325,6 +325,13 @@ p.headquarters {
 }
 .history-link-container a:active {
     background: rgb(8, 114, 201);
+}
+.back-up {
+    transform: rotate(180deg);
+    display: block;
+    margin: 0 auto;
+    padding-top: 30px;
+    width: 7%;
 }
 
 @media only screen and (min-width: 414px) {
@@ -570,6 +577,7 @@ p.headquarters {
     }
     img.back-up {
         width: 5%;
+        padding-bottom: 40px;
         
     }
 }
