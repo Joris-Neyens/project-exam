@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    font-family: brandon-grotesque, sans-serif;
+    font-family: open-sans, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 0.8em;
@@ -18,6 +18,7 @@ header {
     min-height: 100vh;
 }
 h2 {
+    font-family: brandon-grotesque, sans-serif;
     margin: 0;
     font-weight: 700;
     font-size: 1.4rem;
@@ -30,6 +31,7 @@ p {
     line-height: 1.7em;
 }
 .logo {
+    font-family: brandon-grotesque, sans-serif;
     width: 45%;
     display: flex;
     padding: 10px;
@@ -51,6 +53,7 @@ a {
     line-height: 1.4rem;
 }
 h1 {
+    font-family: brandon-grotesque, sans-serif;
     width: 90%;
     margin: 0 auto;
     font-weight: 700;
@@ -74,12 +77,48 @@ h1 {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    transition: 0.2s;
+    z-index: 2;
 }
 .main-menu {
+    top: 10px;
     display: none;
     position: fixed;
     right: 0;
-    transition: 0.2s
+    transition: 0.2s;
+    width: 100%;
+    z-index: 2;
+    height: 95px;
+}
+.main-menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size:  1.2rem;
+}
+.main-menu {
+    display: block;
+}
+.main-menu ul {
+    list-style-type: none;
+    display: flex;
+    margin-left: 60vw;  
+    list-style-type: none;
+    display: flex;
+}
+.main-menu li {
+    padding: 0 10px;
+}
+a.current-page {
+    color: #818C98;
+}
+.main-menu a:hover {
+    color: #1AB1E6;
+}
+.main-menu a:active {
+    color: #098CF6;
 }
 .burger-button {
     padding: 16px;
@@ -344,17 +383,17 @@ h1 {
         font-size: 1.6rem;
     }
     .tagline {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     h2 {
         font-size: 1.6rem;
     }
     .link {
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding: 0.2em;
     }
     p {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     /*-------*/
     .logo {
@@ -371,10 +410,10 @@ h1 {
     font-size: 1.2em;
     }
     .tagline {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
     .logo p {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         line-height: 1.6rem;
     }
     h1 {
@@ -384,12 +423,9 @@ h1 {
         font-size: 1.6rem;
     }
     p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     /*--------*/
-    .logo {
-        width: 55%;
-    }
     .burger-button {
         padding: 29px;
     }
@@ -405,14 +441,14 @@ h1 {
     }
     h1 {
         font-size: 2.2rem;
-        padding-top: 50px;
+        padding-top: 150px;
     }
     .header-image img {
         width: 40%;
-        padding-top: 15px;
+        padding-top: 50px;
     }
     .tagline {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         font-weight: 300;
         padding-top: 5px;
     }
@@ -420,37 +456,11 @@ h1 {
         font-size: 2rem; 
     }
     p {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     /*---navigation-bar--------*/
-    .navigation-bar {
-        align-items: center;
-    }
-    .main-menu a {
-        text-decoration: none;
-        text-transform: uppercase;
-        color: white;
-        font-size:  1.2rem;
-    }
     .main-menu {
         display: block;
-        margin-right: 5%;
-    }
-    .main-menu ul {
-        list-style-type: none;
-        display: flex;
-    }
-    .main-menu li {
-        padding: 0 10px;
-    }
-    a.current-page {
-        color: #818C98;
-    }
-    .main-menu a:hover {
-        color: #1AB1E6;
-    }
-    .main-menu a:active {
-        color: #098CF6;
     }
     .burger-button {
         display: none;

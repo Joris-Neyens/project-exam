@@ -234,7 +234,7 @@ button:hover {
 @media only screen and (min-width: 600px) {
  /*----font-sizes----*/
     .logo p {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         line-height: 1.6rem;
     }
     h1 {
@@ -245,9 +245,6 @@ button:hover {
     }
     p {
         font-size: 1rem;
-    }
-    .logo {
-        width: 55%;
     }
     .burger-button {
         padding: 29px;

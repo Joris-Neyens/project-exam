@@ -71,8 +71,6 @@ h3 {
     background: rgba(0, 0, 0, 0.8);
     position: fixed;
     transition: 0.2s;
-}
-.navigation-bar {
     align-items: center;
 }
 .main-menu a {
@@ -260,7 +258,7 @@ iframe {
            font-size: 1rem;
        }
        .logo {
-           width: 48%;
+           width: 50%;
        }
        .burger-button {
            padding: 29px;

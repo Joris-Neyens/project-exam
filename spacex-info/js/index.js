@@ -38,16 +38,20 @@ let scrollPosition = window.pageYOffset;
     scrollPosition = currentPosition;
 }
 // main-menu on scroll
+const navigationBar = document.querySelector(".navigation-bar");
 const mainMenu = document.querySelector(".main-menu");
+
     let newScrollPosition = window.pageYOffset;
     window.addEventListener("scroll", mainScrollEvent);
 
     function mainScrollEvent() {
         const currentPosition = window.pageYOffset;
         if(newScrollPosition > currentPosition) {
+            navigationBar.style.top = "0px";
             mainMenu.style.top = "10px";
         } else {
-            mainMenu.style.top = "-70px";
+            navigationBar.style.top = "-100px";
+            mainMenu.style.top = "-100px";
         }
     newScrollPosition = currentPosition;
 }
@@ -189,7 +193,7 @@ function launchesUpcoming(upcoming) {
 
     let upcomingArray = upcoming.length;
     for(let i = 0; i < upcomingArray; i++) {
-        if(i === 3) break;  
+        if(i === 6) break;  
 
         let launchDate = new Date(upcoming[i].launch_date_utc)
         let formattedDate = launchDate.getDate() + "-" + (launchDate.getMonth() + 1) + "-" + launchDate.getFullYear();
@@ -220,7 +224,7 @@ function launchesUpcoming(upcoming) {
 
             let upcomingArray = upcoming.length;
             for(let i = 0; i < upcomingArray; i++) {
-                if(i === 3) break;  
+                if(i === 6) break;  
 
                 let launchDate = new Date(upcoming[i].launch_date_utc)
                 let formattedDate = launchDate.getDate() + "-" + (launchDate.getMonth() + 1) + "-" + launchDate.getFullYear();
