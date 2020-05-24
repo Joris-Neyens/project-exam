@@ -14,7 +14,7 @@ header {
     position: relative;
 }
 p {
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 a {
     text-decoration: none;
@@ -164,7 +164,7 @@ label {
     margin: 0 auto;
 }
 input {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-family: open-sans, sans-serif;
     border-style: none;
     border-radius: 5px;
@@ -180,7 +180,7 @@ textarea {
     width: 100%;
     margin-bottom: 20px;
     font-family: open-sans, sans-serif;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-style: normal;
     background: rgb(235, 235, 235);
     border-style: none;
@@ -247,7 +247,7 @@ button:hover {
         font-size: 1rem;
     }
     .burger-button {
-        padding: 29px;
+        padding: 22px;
     }
     label {
         font-size: 1rem;

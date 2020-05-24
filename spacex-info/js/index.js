@@ -244,7 +244,7 @@ function launchesUpcoming(upcoming) {
         } else if(toggle == 1) {
             toggle = 0;
 
-                showMore.innerHTML = `^`
+                showMore.innerHTML = `<img class="show-less" src="/images/arrow-white.png" alt="arrow, link to close the list">`
                 showMore.classList.add(`show-less`)
 
                 const launchContainer = document.querySelector(".launch-container");

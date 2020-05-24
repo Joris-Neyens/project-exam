@@ -58,7 +58,7 @@ h1 {
     margin: 0 auto;
     font-weight: 700;
     font-size: 1.4rem;
-    padding-top: 15vh;
+    padding-top: 25vh;
     text-align: center;
     text-transform: uppercase;
 }
@@ -98,9 +98,6 @@ h1 {
     color: white;
     font-size:  1.2rem;
 }
-.main-menu {
-    display: block;
-}
 .main-menu ul {
     list-style-type: none;
     display: flex;
@@ -121,7 +118,7 @@ a.current-page {
     color: #098CF6;
 }
 .burger-button {
-    padding: 16px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     background: black;
@@ -143,6 +140,7 @@ a.current-page {
 .burger-menu ul {
     position: fixed;
     right: 0;
+    top: 66.5px;
     width: 100%;
     list-style-type: none;
     padding: 0;
@@ -152,7 +150,7 @@ a.current-page {
     z-index: 2;
 }
 .burger-menu li {
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.8);
     padding: 20px 20px 10px 0;
     text-align: right;
 }
@@ -402,6 +400,9 @@ a.current-page {
     .burger-button {
         padding: 23px;
     }
+    .burger-menu ul {
+        top: 82px;
+    }
 }
 @media only screen and (min-width: 600px) {
 
@@ -427,7 +428,7 @@ a.current-page {
     }
     /*--------*/
     .burger-button {
-        padding: 29px;
+        padding: 22px;
     }
 }
 
@@ -445,7 +446,7 @@ a.current-page {
     }
     .header-image img {
         width: 40%;
-        padding-top: 50px;
+        padding-top: 20vh;
     }
     .tagline {
         font-size: 1.4rem;
